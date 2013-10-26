@@ -1,0 +1,21 @@
+doctype
+html
+  head
+    title Grndz - The Ultimate Coffee Destination
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+
+    meta name="viewport" content="initial-scale=0.9"
+
+  body
+
+    = render "shared/navbar"
+
+    .container
+      #textured-container
+        = yield
+
+      = render "shared/footer"
+
+    = render "shared/google_analytics"
