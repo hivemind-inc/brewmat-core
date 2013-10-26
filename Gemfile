@@ -1,9 +1,20 @@
 source 'https://rubygems.org'
 
-gem 'pg'
+gem 'slim'
+
+group :development, :test do
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'guard'
+  gem 'guard-rspec', require: false
+end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
+
+# Use pg as the database for Active Record
+gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
