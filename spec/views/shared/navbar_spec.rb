@@ -40,6 +40,11 @@ describe "shared/_navbar" do
       rendered.should have_content "Home"
     end
 
+    it "should have a link to 'About'" do
+      rendered.should have_css "a[href='#{about_path}']"
+      rendered.should have_content "About"
+    end
+
     it "should have a link to 'Blog'" do
       rendered.should have_css "a[href='http://blog.grndz.com']"
       rendered.should have_content "Blog"
@@ -47,11 +52,6 @@ describe "shared/_navbar" do
 
     it "should open the blog site in a new tab" do
       rendered.should have_css "a[target='_blank']"
-    end
-
-    it "should have a link to 'About'" do
-      rendered.should have_css "a[href='#{about_path}']"
-      rendered.should have_content "About"
     end
   end
 end
