@@ -1,13 +1,15 @@
 #index-container
   h1 We Build Coffee.
 
-  .row
-    .col-sm-4
-      = image_tag "index/0.jpg", class: "img-thumbnail"
-    .col-sm-4
-      = image_tag "index/1.jpg", class: "img-thumbnail"
-    .col-sm-4
-      = image_tag "index/2.jpg", class: "img-thumbnail"
+  - unless browser.mobile? or browser.tablet?
+    .hidden-xs
+      .row
+        .col-sm-4
+          = image_tag "index/0.jpg", class: "img-thumbnail"
+        .col-sm-4
+          = image_tag "index/1.jpg", class: "img-thumbnail"
+        .col-sm-4
+          = image_tag "index/2.jpg", class: "img-thumbnail"
 
   h3 What's on the Menu?
 

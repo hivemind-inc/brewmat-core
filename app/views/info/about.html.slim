@@ -1,13 +1,15 @@
 #about-container
   h1 Brewing Up a Storm.
 
-  .row
-    .col-sm-4
-      = image_tag "about/0.jpg", class: "img-thumbnail"
-    .col-sm-4
-      = image_tag "about/1.jpg", class: "img-thumbnail"
-    .col-sm-4
-      = image_tag "about/2.jpg", class: "img-thumbnail"
+  - unless browser.mobile? or browser.tablet?
+    .hidden-xs
+      .row
+        .col-sm-4
+          = image_tag "about/0.jpg", class: "img-thumbnail"
+        .col-sm-4
+          = image_tag "about/1.jpg", class: "img-thumbnail"
+        .col-sm-4
+          = image_tag "about/2.jpg", class: "img-thumbnail"
 
   br
 

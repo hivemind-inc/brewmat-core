@@ -27,6 +27,7 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.1)
     atomic (1.1.14)
+    browser (0.2.1)
     builder (3.1.4)
     capybara (2.1.0)
       mime-types (>= 1.16)
@@ -172,6 +173,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  browser
   capybara
   coffee-rails (~> 4.0.0)
   factory_girl_rails
