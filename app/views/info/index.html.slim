@@ -1,29 +1,65 @@
-#index-container
-  h1 We Build Coffee.
+.container.large-menu
+  #textured-container
+    #index-container
+      h1.text-center We Build Coffee.
 
-  - unless browser.mobile? or browser.tablet?
-    .hidden-xs
+      #index-banner
+        =image_tag 'index/banner.jpg', class: "img-thumbnail"
+
+      br
+
+      h2.text-center Coffee buying made easy.
+
+      br
+
       .row
         .col-sm-4
-          = image_tag "index/0.jpg", class: "img-thumbnail"
+          h3 Browse
+          .glyphicon.glyphicon-search
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae purus faucibus, ullamcorper lorem at, fringilla sapien.
+
         .col-sm-4
-          = image_tag "index/1.jpg", class: "img-thumbnail"
+          h3 Buy
+          .glyphicon.glyphicon-barcode
+          p
+            | Fusce molestie ipsum ipsum, eget ultricies augue placerat a. Nulla sed semper felis. Sed eleifend, massa sed gravida placerat, dui nibh dictum metus, interdum sodales quam dolor non diam.
+
         .col-sm-4
-          = image_tag "index/2.jpg", class: "img-thumbnail"
+          h3 Enjoy
+          .glyphicon.glyphicon-cutlery
+          p
+            | Aliquam lacinia erat erat, lacinia feugiat turpis venenatis quis. Maecenas dapibus, nulla at gravida vestibulum, nisl urna eleifend mi, rutrum posuere purus enim ac orci.
 
-  h3 What's on the Menu?
+      hr
 
-  p
-    | Easily accessibly coffee that can be browser, bought and shipped right to your front door from the convenience of your home.
+      h2.text-center Additional Resources
 
-  h3 Coffee that ACTUALLY Tastes Good.
+      br
 
-  p
-    | Gone are the days of
+      .row
+        .col-sm-4
+          h3 Get in Touch
 
-  h3 Plus, it's Painlessly Simple to Get.
+          p We'd love to hear from you about <em>your experience</em> with buying coffee. If nothing else, give us a line about your favorite blend!
 
-  p
-    | We don't like hard things. That's exactly why we plan on making buying coffee more convenient than ever. That includes cool features like reoccurring coffee delivery, coffee recommendation services and customizable coffee blends.
+          button.btn
+             a href="mailto:contact@grndz.com" Contact Us
 
-  h3 Stocked, Roasted and Delivered
+        .col-sm-4
+          h3 More About Us
+
+          p
+            | If you love coffee, want to read more about what we're doing, or are just plain interested in Grndz, checkout our tidy little about page.
+
+          button.btn
+            = link_to "About Us", about_path
+
+        .col-sm-4
+          h3 Follow our Blog
+
+          p
+            | We're working hard to make this happen. Keep yourself informed by checking out our smashing new coffee-startup-technical blog.
+
+          button.btn
+            =link_to "Grndz Blog", "http://blog.grndz.com"

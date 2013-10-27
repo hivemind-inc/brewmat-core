@@ -8,21 +8,26 @@ describe 'info/index' do
 
   it "should render some titles (e.g. it exists)" do
     expect(rendered).to include("We Build Coffee.")
-    expect(rendered).to include("What's on the Menu?")
-    expect(rendered).to include("Coffee that ACTUALLY Tastes Good.")
-    expect(rendered).to include("Plus, it's Painlessly Simple to Get.")
+    expect(rendered).to include("Coffee buying made easy.")
+    expect(rendered).to include("Additional Resources")
   end
 
-  it "should have the banner images visible" do
-    rendered.should have_css "img[src='/assets/index/0.jpg']"
-    rendered.should have_css "img[src='/assets/index/1.jpg']"
-    rendered.should have_css "img[src='/assets/index/2.jpg']"
+  it "should have the banner image visible" do
+    rendered.should have_css "img[src='/assets/index/banner.jpg']"
   end
 
-  it "should not have banner images visible on mobile devices" do
-    pending "don't know how to mock the 'browser.mobile?' object / method"
-    rendered.should_not have_css "img[src='/assets/index/0.jpg']"
-    rendered.should_not have_css "img[src='/assets/index/1.jpg']"
-    rendered.should_not have_css "img[src='/assets/index/2.jpg']"
+  it "should have a link to the about page" do
+    rendered.should have_content "About Us"
+    rendered.should have_css "a[href='/about']"
+  end
+
+  it "should have a link to the blog site" do
+    rendered.should have_content "Grndz Blog"
+    rendered.should have_css "a[href='http://blog.grndz.com']"
+  end
+
+  it "should have a contact us mailto link" do
+    rendered.should have_content "Contact Us"
+    rendered.should have_css "a[href='mailto:contact@grndz.com']"
   end
 end

@@ -11,4 +11,5 @@
  *= require bootstrap.min.css
  *= require_self
  *= require_tree .
+ *= require font
  */
