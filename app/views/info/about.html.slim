@@ -1,5 +1,55 @@
-h1 About Grndz
+#about-container
+  h1 Brewing Up a Storm.
 
-h3 Built and Brewed by Denver's Finest
-p
-  | We're starting small, but take us just as seriously. This two man shop has a wide variety of experience that covers just about all the business basics. More importantly, we both share a innate love of coffee and all it's incarnations.
+  .row
+    .col-sm-4
+      = image_tag "about/0.jpg", class: "img-thumbnail"
+    .col-sm-4
+      = image_tag "about/1.jpg", class: "img-thumbnail"
+    .col-sm-4
+      = image_tag "about/2.jpg", class: "img-thumbnail"
+
+  br
+
+  .row
+    .col-sm-4
+      ul.list-inline
+        li.glyphicon.glyphicon-calendar
+        li
+          p <strong>Founded</strong>
+          p.thin-font 2013
+    .col-sm-4
+      ul.list-inline
+        li.glyphicon.glyphicon-map-marker
+        li
+          p <strong>Home Base</strong>
+          p.thin-font Denver, CO
+    .col-sm-4
+      ul.list-inline
+        li.glyphicon.glyphicon-user
+        li
+          p <strong>Grndzers</strong>
+          p.thin-font 2
+
+  h3 The Lowdown
+
+  p.lead
+    | <strong>Grndz is the ultimate destination to browse and order coffee from the web.</strong>
+
+  p
+    | We're starting small, but take us just as seriously. This two man shop has a wide variety of experience that covers just about all the business basics. We're committed to one goal and one goal only: revolutionize the coffee industry.
+
+  p While we're busy building, checkout our <a href='http://blog.grndz.com'>sweet new blog</a>!
+
+  h3 Crafted by Denver's Finest
+
+  = render partial: "bios/dgb", locals: {show_contact: false}
+  = render partial: "bios/erg", locals: {show_contact: false}
+  = render partial: "bios/thm", locals: {show_contact: false}
+
+  / TODO: port this into a blog post.
+  / h3 Coffee Break for Coffee Porn
+  / p You've made it this far, we think you deserve a treat.
+  / .text-center
+  /   .video-container
+  /     <iframe width="700" height="400" src="//www.youtube.com/embed/aidvznATOnk" frameborder="0" allowfullscreen></iframe>

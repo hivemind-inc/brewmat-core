@@ -1,0 +1,22 @@
+#about-container {
+  .col-sm-4 {
+    padding-right : 0px;
+
+    .glyphicon {
+      font-size : 33px;
+    }
+
+    p {
+      margin : 0px;
+    }
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  p.lead {
+    font-size: 18px;
+    font-weight : bold;
+  }
+}
