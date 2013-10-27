@@ -44,4 +44,17 @@ describe 'info/about' do
   it "should render a partial for THM" do
     expect(response).to render_template("bios/_thm")
   end
+
+  it "should have the banner images visible" do
+    rendered.should have_css "img[src='/assets/about/0.jpg']"
+    rendered.should have_css "img[src='/assets/about/1.jpg']"
+    rendered.should have_css "img[src='/assets/about/2.jpg']"
+  end
+
+  it "should not have banner images visible on mobile devices" do
+    pending "don't know how to mock the 'browser.mobile?' object / method"
+    rendered.should_not have_css "img[src='/assets/about/0.jpg']"
+    rendered.should_not have_css "img[src='/assets/about/1.jpg']"
+    rendered.should_not have_css "img[src='/assets/about/2.jpg']"
+  end
 end
