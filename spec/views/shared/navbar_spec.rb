@@ -17,13 +17,6 @@ describe "shared/_navbar" do
       rendered.should have_css "li.active a[href='#{about_path}']"
     end
 
-    it "should be 'active' when on application#contact_path" do
-      params[:controller] = "application"
-      params[:action]     = "contact_page"
-      render
-      rendered.should have_css "li.active a[href='#{contact_path}']"
-    end
-
     it "should be 'active' when on posts#index" do
       params[:controller] = "posts"
       params[:action]     = "index"
@@ -59,11 +52,6 @@ describe "shared/_navbar" do
     it "should have a link to 'About'" do
       rendered.should have_css "a[href='#{about_path}']"
       rendered.should have_content "About"
-    end
-
-    it "should have a link to create a 'Contact'" do
-      rendered.should have_css "a[href='#{contact_path}']"
-      rendered.should have_content "Contact"
     end
   end
 end
