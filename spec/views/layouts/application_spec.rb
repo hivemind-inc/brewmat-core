@@ -6,7 +6,7 @@ describe "layouts/application" do
   end
 
   it "should have the correct page title" do
-    title = "Grndz - Browse, Buy and Deliver. We bring coffee of all roasts and flavors right to your door."
+    title = "Grndz - Craft Coffee Redefined - High quality roasts, online marketplace."
     response.should have_content title
   end
 
