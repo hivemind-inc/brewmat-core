@@ -8,7 +8,7 @@ describe 'info/index' do
 
   it "should render some titles (e.g. it exists)" do
     expect(rendered).to include("We Build Coffee.")
-    expect(rendered).to include("Coffee buying made easy.")
+    expect(rendered).to include("Buying coffee made easy.")
     expect(rendered).to include("Additional Resources")
   end
 
