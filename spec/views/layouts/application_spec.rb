@@ -6,7 +6,8 @@ describe "layouts/application" do
   end
 
   it "should have the correct page title" do
-    response.should have_content "Grndz - The Ultimate Coffee Destination"
+    title = "Grndz - Browse, Buy and Deliver. We bring coffee of all roasts and flavors right to your door."
+    response.should have_content title
   end
 
   it "should render the google analytics partial" do
