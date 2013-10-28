@@ -12,8 +12,15 @@ $toffee_brown : #B0946C;
     color            : #ddd !important;
   }
 
-  li a { color : #332d00 !important; }
-  li.inactive a { color : #332d00 !important; }
+  li a {
+    color : #332d00 !important;
+    font-family: 'Goudy Bookletter 1911', serif;
+    font-size: 20px;
+  }
+
+  li.inactive a {
+    color : #332d00 !important;
+  }
 
   .anti-decoration {
     color           : $toffee_brown;
