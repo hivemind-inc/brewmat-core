@@ -50,8 +50,8 @@ describe "shared/_navbar" do
       rendered.should have_content "Blog"
     end
 
-    it "should open the blog site in a new tab" do
-      rendered.should have_css "a[target='_blank']"
+    it "should NOT open the blog site in a new tab" do
+      rendered.should_not have_css "a[target='_blank']"
     end
   end
 end
