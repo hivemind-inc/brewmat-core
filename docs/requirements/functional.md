@@ -11,6 +11,7 @@
 - Allow Customers to store credit cards
 - Allow Customers to rate coffee that they've purchased
 - Allow Customers to comment about coffee that they've purchased
+- Allow customers to subscribe, having coffee delivered at a regular interval
 - Allow Vendors to create accounts 
 - Allow Vendors to add a brand for their company (coffee co.)
 - Allow Vendors to add products to their brand (coffee)
@@ -23,7 +24,6 @@
 
 >Important, but not MVP. Our core product can still exist without this. They would be nice to have though...
 
-- Allow customers to subscribe, having coffee delivered at a regular interval
 - Allow Vendors to view ratings and respond to comments
    - should be relatively easy to implement
 - Admin panel for viewing sales statistics (I know @EGartin <3's this)
