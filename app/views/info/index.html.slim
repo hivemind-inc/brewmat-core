@@ -1,57 +1,39 @@
-.container.large-menu
+.container.small-menu
   #textured-container
-    #index-container
-      h1.text-center We Build Coffee.
+    h1.text-center We Build Coffee.
 
-      #index-banner
-        =image_tag 'index/banner.jpg', class: "img-thumbnail"
+    .row
+      / .col-md-12
+      /   p <strong>Grndz</strong> is an online marketplace for browsing and buying the best coffee in the world.
 
-      h2.text-center Craft coffee deserves better.
+      .col-md-12
+        h2 The Promise.
+      .col-md-12
+        ul.list-inline
+          li
+            span.glyphicon.glyphicon-ok-sign
+          li
+            h3 We offer a selection you can understand.
 
-      .row
-        .col-sm-4
-          h3 Browse
-          .glyphicon.glyphicon-search
-          p
-            | Buying high quality coffee from local roasters is difficult. We're preparing an entirely new way to buy craft coffee online. Experience <em>craft coffee</em> at it's finest, available to browse from anywhere in the world.
+      .col-md-12
+        ul.list-inline
+          li
+            span.glyphicon.glyphicon-ok-sign
+          li
+            h3 Our coffee is delivered directly to your door.
 
-        .col-sm-4
-          h3 Buy
-          .glyphicon.glyphicon-barcode
-          p
-            | Grndz provides you with a friendly, intuitive and richly populated experience that makes buying easy. With reviews, ratings and promotions, you'll never run out of interesting blends of craft coffee to experience.
+      .col-md-12
+        ul.list-inline
+          li
+            span.glyphicon.glyphicon-ok-sign
+          li
+            h3 We offer a seriously dependable subscription service.
 
-        .col-sm-4
-          h3 Enjoy
-          .glyphicon.glyphicon-cutlery
-          p
-            | With our reoccurring subscription shipping service, a powerful yet elegant marketplace, and a diverse selection of local craft coffee from across the country, you'll always have a hot cup of fresh java to sip and stir.
+      .col-md-12
+        h2 We're Coming.
+        p.bookletter
+          | We're working hard to make this happen ASAP. Keep yourself informed by checking out our uber new blog. It's packed with info!
 
-      h2.text-center Additional Resources
-
-      .row
-        .col-sm-4
-          h3 Get in Touch
-
-          p We'd love to hear from you about <em>your experience</em> with buying coffee. If nothing else, give us a line about your favorite blend!
-
+        a href="http://blog.grndz.com"
           button.grnz-btn.btn
-             a href="mailto:contact@grndz.com" Contact Us
-
-        .col-sm-4
-          h3 More About Us
-
-          p
-            | If you love coffee, want to read more about what we're doing, or are just plain interested in Grndz, checkout our tidy little <em>about us</em> page.
-
-          button.grnz-btn.btn
-            = link_to "About Us", about_path
-
-        .col-sm-4
-          h3 Follow our Blog
-
-          p
-            | We're working hard to make this happen ASAP. Keep yourself informed by checking out our uber new blog. It's packed with info!
-
-          button.grnz-btn.btn
-            =link_to "Grndz Blog", "http://blog.grndz.com"
+           | Visit Our Blog!
