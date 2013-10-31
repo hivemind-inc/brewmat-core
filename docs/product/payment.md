@@ -1,4 +1,4 @@
-# Grndz MVP: Payment
+# Grndz:Payment
 
 1. Grndz takes direct payment for the coffee.
 2. Grndz withholds funds from vendor until product is marked "shipped" w/ tracking #

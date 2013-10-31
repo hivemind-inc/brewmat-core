@@ -1,4 +1,4 @@
-# Grndz MVP: User Flow / UX
+# Grndz:UX/Flow
 
 This is a big picture overview of how the two types of *users* will experience the **Grndz** application.
 
