@@ -3,8 +3,6 @@ GrndzApp::Application.routes.draw do
   root to: 'application#index'
 
   get '/'       => 'application#index',        as: 'index'
-  get 'about'   => 'application#about_page',   as: 'about'
-  get 'contact' => 'application#contact_page', as: 'contact'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

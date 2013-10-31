@@ -4,14 +4,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def index
-    render 'info/index'
-  end
-
-  def about_page
-    render 'info/about'
-  end
-
-  def contact_page
-    render 'info/contact'
+    render 'layouts/index'
   end
 end
