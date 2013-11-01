@@ -109,18 +109,30 @@ To provide the user with a page to view their recent orders and relevant info.
 
 ## Checkout
 
+### "Register"
+
+#### Purpose
+
+Provide the customer with a place to enter their billing / shipping info, sign in.
+
 ### Confirmation
 
 ##### Purpose
 
-##### Overview
+Provide the customer a place to review and place their finalized order.
 
 ##### Other Notes
+
+I'd like to roll our own checkout system at some point, to avoid having to pay a cut to use a prefabricated solution like PayPal.
 
 ### Complete
 
 #### Purpose
 
-#### Overview
+Provide the customer with a visual confirmation that they've successfully completed their purchase, while displaying relevant information.
 
-#### Other Notes
+## Sign In
+
+### Purpose
+
+To let vendors and customers sign into with their accounts.
