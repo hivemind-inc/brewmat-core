@@ -59,43 +59,65 @@ For example, we could have a *free version*, which lets them add up to 3 product
 
 #### Purpose
 
+Provide the user with an individual page that gives detailed info for a given  product.
+
 #### Overview
 
+This page will be at the very core, one of the most important and complex pages on Grndz. This will have the images, info, tasting notes, vendor info, comments, rating, etc. The page has all the information a user needs to make a purchase.
+
 #### Other Notes
+
+There are MANY subcomponents in the page which can be broken apart functionally in this page. They should be relatively easy to implement as vertical slices of functionality.
 
 ## Vendor Settings
 
 #### Purpose
 
-#### Overview
-
-#### Other Notes
-
-## Customer Settings
-
-#### Purpose
+Provide the *vendor* with an access panel for managing their brand and associated products.
 
 #### Overview
 
+Vendors must be able to manage their:
+
+1. account settings
+2. vendor settings
+3. product settings
+
+The underlying goal is to create a place for the vendors to "CRUD" their products and create / update their brand. This is an admin panel for vendors.
+
 #### Other Notes
+
+These are prime candidates for being broken into separate pages in and of themselves.
+
+### Customer
+
+#### Settings
+
+##### Purpose
+
+Provide the user with a place to modify their account settings, and see relevant info about their account.
+
+##### Overview
+
+Users must be able to manage their account settings (e.g. email, password, billing, shipping, etc.)
+
+#### Shipment Tracking
+
+##### Purpose
+
+To provide the user with a page to view their recent orders and relevant info.
 
 ## Checkout
 
-#### Purpose
+### Confirmation
 
-#### Overview
+##### Purpose
 
-#### Other Notes
+##### Overview
 
-## Checkout Confirmation
+##### Other Notes
 
-#### Purpose
-
-#### Overview
-
-#### Other Notes
-
-## Checkout Complete
+### Complete
 
 #### Purpose
 
