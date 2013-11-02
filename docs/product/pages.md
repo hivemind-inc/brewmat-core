@@ -47,11 +47,11 @@ This is a GREAT place for vendors to list their products in a sexy, clean and in
 
 #### Other Notes
 
-This can be a FUCKING SHALOM MONEY MAKER. 
+This can be a FUCKING SHALOM MONEY MAKER.
 
-Now all of a sudden, vendors (particularly small ones) don't have the overhead of creating an functioning online storefront for their products. 
+Now all of a sudden, vendors (particularly small ones) don't have the overhead of creating an functioning online storefront for their products.
 
-We've built that for them, they just populate it with content and hit "save." Not only is this hugely appealing for vendors to use our product, it also could be a potential point for us to charge the vendors to use our site. 
+We've built that for them, they just populate it with content and hit "save." Not only is this hugely appealing for vendors to use our product, it also could be a potential point for us to charge the vendors to use our site.
 
 For example, we could have a *free version*, which lets them add up to 3 products. A *medium version* and a *pro version*, which respectively allow for more and more coffee to be sold on the marketplace.
 
