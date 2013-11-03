@@ -1,4 +1,9 @@
-@import url(http://fonts.googleapis.com/css?family=Fredericka+the+Great);
+@font-face {
+  font-family: 'Fredericka the Great';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Fredericka the Great'), local('FrederickatheGreat'), url('/fonts/fredericka.woff') format('woff');
+}
 
 body {
   font-family: Tahoma, Geneva, sans-serif;
@@ -6,7 +11,7 @@ body {
 }
 
 .great {
-  font-family: 'Fredericka the Great', cursive;
+  font-family: 'Fredericka the Great';
 }
 
 p {
