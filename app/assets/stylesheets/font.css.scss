@@ -1,9 +1,16 @@
-p {
-  font-size : 18px;
+@import url(http://fonts.googleapis.com/css?family=Fredericka+the+Great);
+
+body {
+  font-family: Tahoma, Geneva, sans-serif;
+  color: #ffe;
 }
 
-p, h1, h2, h3  {
-  font-family: 'Goudy Bookletter 1911', serif;
+.great {
+  font-family: 'Fredericka the Great', cursive;
+}
+
+p {
+  font-size : 18px;
 }
 
 h1 {
