@@ -9,7 +9,7 @@
 #banner {
   position: absolute;
   text-align: center;
-  top: 12%;
+  top: 10%;
   width: 100%;
 }
 
@@ -22,4 +22,37 @@
 #banner #banner-subtitle {
   display: none;
   font-size: 30px;
+}
+
+#info-block.textured {
+  top: 32%;
+  left: 26%;
+  position: fixed;
+  width: 550px;
+}
+
+#info-block #info-block-title {
+  color: #333;
+  text-align: center;
+  font-size: 40px;
+}
+
+#info-block-subscription {
+  color: #333;
+  text-align: center;
+  font-size: 20px;
+  padding-top: 5px;
+  padding-bottom: 25px;
+}
+
+#info-block-topics {
+  color: #333;
+  text-align: center;
+}
+
+#info-block-topics .info-item {
+  font-size: 20px;
+  float: left;
+  width: 33%;
+  border: 1px solid;
 }
