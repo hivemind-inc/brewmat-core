@@ -1,9 +1,4 @@
 #backdrop {
-
-  // TODO: IE blur - does this work?
-  filter:blur(add = 0, direction = 300, strength = 10);
-
-  -webkit-filter: blur(5px);
   background-image: url(bg-image-small.jpeg);
   background-position: center;
   background-size: cover;
@@ -19,10 +14,12 @@
 }
 
 #banner #banner-title {
+  display: none;
   font-size: 100px;
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
 }
 
 #banner #banner-subtitle {
+  display: none;
   font-size: 30px;
 }
