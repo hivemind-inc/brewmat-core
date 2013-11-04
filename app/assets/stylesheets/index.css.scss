@@ -7,20 +7,19 @@
 }
 
 #home-container {
+  margin: 10px;
   position: fixed;
   text-align: center;
   top: 8%;
   width: 100%;
-}
 
-#home-container #banner-title{
-  margin: 10px;
-  font-size: 90px;
-}
+  #banner-title {
+    font-size: 90px;
+  }
 
-#home-container #banner-subtitle {
-  margin: 10px;
-  font-size: 30px;
+  #banner-subtitle {
+    font-size: 30px;
+  }
 }
 
 #home-container #banner-title,
@@ -31,24 +30,23 @@
 
 #info-block {
   height: 300px;
-  position: relative;
-  max-width: 450px;
   margin-top: 60px;
-}
+  max-width: 450px;
+  position: relative;
 
-#info-block #info-block-title,
-#info-block-subscription {
-  color: #333;
-  text-align: center;
-}
+  #info-block-title,
+  #info-block-subscription {
+    color: #333;
+    text-align: center;
+  }
 
+  #info-block-title {
+    font-size: 40px;
+  }
 
-#info-block #info-block-title {
-  font-size: 40px;
-}
-
-#info-block-subscription {
-  font-size: 20px;
-  padding-bottom: 25px;
-  padding-top: 5px;
+  #info-block-subscription {
+    font-size: 20px;
+    padding-bottom: 25px;
+    padding-top: 5px;
+  }
 }
