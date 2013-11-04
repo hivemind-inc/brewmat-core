@@ -9,50 +9,36 @@
 #banner {
   position: fixed;
   text-align: center;
-  top: 10%;
+  top: 8%;
   width: 100%;
 }
 
-#banner #banner-title {
-  display: none;
-  font-size: 100px;
-  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
+#banner #banner-title h1 {
+  margin: 10px;
 }
 
-#banner #banner-subtitle {
-  display: none;
-  font-size: 30px;
+#banner #banner-subtitle h2 {
+  margin: 10px;
 }
 
-#info-block.textured {
-  position: fixed;
+#banner #banner-title,
+#banner #banner-subtitle,
+#info-block {
+  display: none;
+}
+
+#info-block-container {
   text-align: center;
-  top: 32%;
+  position: fixed;
+  top: 40%;
+  width: 100%;
+  height: auto;
 }
 
-@media (min-width: 1200px) {
-  #info-block.textured {
-    width: 39%;
-    margin-left: 30%;
-    margin-right: 30%;
-  }
-}
-
-@media (min-width: 900px) {
-  #info-block.textured {
-    width: 49%;
-    margin-left: 25%;
-    margin-right: 25%;
-  }
-}
-
-@media (max-width: 899px) {
-  #info-block.textured {
-    top: 45%;
-    width: 69%;
-    margin-left: 15%;
-    margin-right: 15%;
-  }
+#info-block {
+  position: relative;
+  width: 500px;
+  height: 185px;
 }
 
 #info-block #info-block-title {

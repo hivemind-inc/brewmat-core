@@ -2,26 +2,28 @@
 
 #banner
   #banner-title.great
-    | We Build Coffee.
+    h1 We Build Coffee.
   #banner-subtitle
-    | A coffee marketplace that you can actually understand.
+    h2 A coffee marketplace that you can actually understand.
 
-#info-block.textured
-  #info-block-title.great Coffee, Subscribed.
-  #info-block-subscription
-    #info-block-subscription-heading Subscribe for updates and additional information.
-    / TODO: subscription form / partial
-  #info-block-topics
-    .info-item.great
-      a href="#" Selection
-    .info-item.great
-      a href="#" Subscription
-    .info-item.great
-      a href="#" Delivery
+#info-block-container
+  #info-block.textured
+    #info-block-title.great Coffee, Subscribed.
+    #info-block-subscription
+      #info-block-subscription-heading Subscribe for updates and additional information.
+      / TODO: subscription form / partial
+    #info-block-topics
+      .info-item.great
+        a href="#" Selection
+      .info-item.great
+        a href="#" Subscription
+      .info-item.great
+        a href="#" Delivery
 
 
 javascript:
   window.onload = function() {
-    $('#banner #banner-title').delay(200).fadeIn(800);
-    $('#banner #banner-subtitle').delay(800).fadeIn(800);
+    $('#banner #banner-title').delay(200).fadeIn(600);
+    $('#banner #banner-subtitle').delay(600).fadeIn(600);
+    $('#info-block').delay(1200).fadeIn(600);
   }
