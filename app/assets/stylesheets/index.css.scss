@@ -36,16 +36,19 @@
   margin-top: 60px;
 }
 
-#info-block #info-block-title {
+#info-block #info-block-title,
+#info-block-subscription {
   color: #333;
-  font-size: 40px;
   text-align: center;
 }
 
+
+#info-block #info-block-title {
+  font-size: 40px;
+}
+
 #info-block-subscription {
-  color: #333;
   font-size: 20px;
   padding-bottom: 25px;
   padding-top: 5px;
-  text-align: center;
 }
