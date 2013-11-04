@@ -14,21 +14,18 @@
   width: 100%;
 
   #banner-title {
+    display: none;
     font-size: 90px;
   }
 
   #banner-subtitle {
+    display: none;
     font-size: 30px;
   }
 }
 
-#home-container #banner-title,
-#home-container #banner-subtitle,
 #info-block {
   display: none;
-}
-
-#info-block {
   height: 300px;
   margin-top: 60px;
   max-width: 450px;
