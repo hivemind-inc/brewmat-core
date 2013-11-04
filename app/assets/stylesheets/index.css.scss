@@ -7,7 +7,7 @@
 }
 
 #banner {
-  position: absolute;
+  position: fixed;
   text-align: center;
   top: 10%;
   width: 100%;
@@ -25,10 +25,34 @@
 }
 
 #info-block.textured {
-  top: 32%;
-  left: 26%;
   position: fixed;
-  width: 550px;
+  text-align: center;
+  top: 32%;
+}
+
+@media (min-width: 1200px) {
+  #info-block.textured {
+    width: 39%;
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+}
+
+@media (min-width: 900px) {
+  #info-block.textured {
+    width: 49%;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+}
+
+@media (max-width: 899px) {
+  #info-block.textured {
+    top: 45%;
+    width: 69%;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
 }
 
 #info-block #info-block-title {
