@@ -1,28 +1,21 @@
 #backdrop
 
-#banner
+#home-container
   #banner-title.great
-    h1 We Build Coffee.
+    | We Build Coffee.
   #banner-subtitle
-    h2 A coffee marketplace that you can actually understand.
+    | A coffee marketplace that you can actually understand.
 
-#info-block-container
   #info-block.textured
     #info-block-title.great Coffee, Subscribed.
     #info-block-subscription
       / TODO: subscription form / partial
-    #info-block-topics
-      .info-item.great
-        a href="#" Selection
-      .info-item.great
-        a href="#" Subscription
-      .info-item.great
-        a href="#" Delivery
-
 
 javascript:
   window.onload = function() {
-    $('#banner #banner-title').delay(200).fadeIn(600);
-    $('#banner #banner-subtitle').delay(600).fadeIn(600);
-    $('#info-block').delay(1200).fadeIn(600);
+    $('#home-container #banner-title').delay(200).fadeIn(function() {
+      $('#home-container #banner-subtitle').fadeIn(function() {
+        $('#info-block').fadeIn();
+      });
+    });
   }
