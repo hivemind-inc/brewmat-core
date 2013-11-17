@@ -53,4 +53,42 @@
       text-align  : center;
     }
   }
+
+  .info-block {
+    margin-left  : auto;
+    margin-right : auto;
+    margin-top   : 60px;
+    text-align   : center;
+    width        : 760px;
+
+    .info {
+      background-color : rgba(255, 255, 255, .45);
+      border           : 2px solid;
+      border-color     : #000;
+      color            : #67230D;
+      display          : inline-block;
+      padding          : 10px;
+
+      &:first-child {
+        padding-right : 30px;
+      }
+
+      &:nth-child(even) {
+        margin-left   : 20px;
+        margin-right  : 20px;
+        padding-right : 20px;
+      }
+
+      .glyphicon {
+        color        : #190808;
+        font-size    : 22px;
+        margin-right : 10px;
+      }
+
+      h4 {
+        display   : inline;
+        font-size : 30px;
+      }
+    }
+  }
 }
