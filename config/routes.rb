@@ -1,8 +1,8 @@
 GrndzApp::Application.routes.draw do
 
-  root to: 'application#index'
+  resources :subscriptions, only: [:new, :create]
 
-  get '/'       => 'application#index',        as: 'index'
+  root to: 'application#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

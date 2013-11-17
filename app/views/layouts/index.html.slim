@@ -1,21 +1,19 @@
-#backdrop
-
 #home-container
-  h1#banner-title.great
-    | We Build Coffee.
-  h2#banner-subtitle
-    | A coffee marketplace that you can actually understand.
+  .rotate
+    h1 Grndz Marketplace
+    h2 Building a Better Cup of Coffee.
 
-  #info-block.textured
-    h3#info-block-title.great Coffee, Subscribed.
-    #info-block-subscription
-      / TODO: subscription form / partial
+  .hover-block
+    h3 Subscribe
 
-javascript:
-  window.onload = function() {
-    $('#home-container #banner-title').delay(200).fadeIn(800, function() {
-      $('#home-container #banner-subtitle').fadeIn(800, function() {
-        $('#home-container #info-block').fadeIn(800);
-      });
-    });
-  }
+  #subscriptionModal.modal.fade aria-hidden="true" role="dialog" tabindex="-1"
+    .modal-dialog
+      .modal-content
+        .modal-header
+          h4 Modal title
+        .modal-body
+          p Modal Body
+        .modal-footer
+          button data-dismiss="modal" type="button" Close
+
+

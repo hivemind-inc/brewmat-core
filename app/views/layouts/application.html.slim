@@ -9,10 +9,6 @@ html
     meta name="viewport"    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     meta name="description" content="Browsing and buying craft coffee, shipped directly to your door."
 
-  body
-
-    / = render "shared/navbar"
-
+  body#backdrop
     = yield
-
     = render "shared/google_analytics"

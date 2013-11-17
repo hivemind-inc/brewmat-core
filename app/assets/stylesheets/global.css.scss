@@ -2,11 +2,22 @@ body {
   margin: 0;
 }
 
-.textured {
-  background     : url(/assets/sos.png);
-  border-radius  : 3px;
-  box-shadow     : 0px 2px 8px #888888;
-  margin-left    : auto;
-  margin-right   : auto;
-  padding: 20px;
+a {
+  color: #6FB5F1;
+}
+
+#backdrop {
+  background-image: url(bg-image-small.jpeg);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.rotate {
+  -webkit-transform : rotate(-10deg);
+  -moz-transform    : rotate(-10deg);
+  -ms-transform     : rotate(-10deg);
+  -o-transform      : rotate(-10deg);
+  filter            : progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
 }

@@ -1,0 +1,15 @@
+= form_for(@subscription, url: subscriptions_path) do |f|
+  - if @subscription.errors.any?
+    #error_explanation
+      h4
+        = pluralize(@subscription.errors.count, "error")
+        | prohibited this subscription from being saved:
+      ul
+        - @subscription.errors.full_messages.each do |msg|
+          li= msg
+  .field
+    = f.label :email
+    br
+      = f.text_field :email
+  .actions
+    = f.submit
