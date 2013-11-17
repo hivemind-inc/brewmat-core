@@ -16,6 +16,11 @@
     margin-bottom  : 15px;
     padding-bottom : 15px;
     width          : 450px;
+
+    :last-child {
+      font-size   : 72px;
+      font-weight : 600;
+    }
   }
 
   h2 {
@@ -26,11 +31,12 @@
   }
 
   .hover-block {
-    border       : 2px solid;
-    margin-left  : auto;
-    margin-right : auto;
-    margin-top   : 180px;
-    width        : 140px;
+    background-color : rgba(0, 0, 0, .2);
+    border           : 2px solid;
+    margin-left      : auto;
+    margin-right     : auto;
+    margin-top       : 120px;
+    width            : 240px;
 
    &:hover {
       background-color : #fff;
@@ -46,9 +52,5 @@
       margin      : 5px;
       text-align  : center;
     }
-  }
-
-  #subscriptionModal {
-    color: #000;
   }
 }
