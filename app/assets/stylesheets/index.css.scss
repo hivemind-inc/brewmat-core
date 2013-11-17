@@ -30,27 +30,33 @@
     font-weight : 200;
   }
 
-  .hover-block {
-    background-color : rgba(0, 0, 0, .2);
-    border           : 2px solid;
-    margin-left      : auto;
-    margin-right     : auto;
-    margin-top       : 120px;
-    width            : 240px;
+  form {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 120px;
+    width: 400px;
 
-   &:hover {
-      background-color : #fff;
-      border-color     : #000;
-      color            : #000;
-      cursor           : hand;
-      opacity          : 0.4;
+    input {
+      border-radius: 0px;
+      height: 50px;
+      width: 270px;
     }
 
-    h3 {
-      font-size   : 20px;
-      font-weight : 200;
-      margin      : 5px;
-      text-align  : center;
+    button {
+      background-color : rgba(0, 0, 0, .5);
+      border           : 2px solid;
+      border-radius    : 0px;
+      color            : #fff;
+      height           : 50px;
+      width            : 130px;
+
+      &:hover {
+        background-color : #fff;
+        border-color     : #fff;
+        color            : #000;
+        cursor           : hand;
+        opacity          : 0.8;
+      }
     }
   }
 
@@ -59,7 +65,7 @@
     margin-right : auto;
     margin-top   : 60px;
     text-align   : center;
-    width        : 760px;
+    width        : 840px;
 
     .info {
       background-color : rgba(255, 255, 255, .45);
@@ -68,15 +74,14 @@
       color            : #67230D;
       display          : inline-block;
       padding          : 10px;
+      width            : 266px;
 
       &:first-child {
-        padding-right : 30px;
+        margin-right  : 20px;
       }
 
-      &:nth-child(even) {
+      &:last-child {
         margin-left   : 20px;
-        margin-right  : 20px;
-        padding-right : 20px;
       }
 
       .glyphicon {
@@ -88,6 +93,12 @@
       h4 {
         display   : inline;
         font-size : 30px;
+      }
+
+      p {
+        color      : #000;
+        // text-align : left;
+        font-size  : 18px;
       }
     }
   }
