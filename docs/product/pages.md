@@ -1,138 +1,121 @@
-# Grndz:Pages
+# Page Overview
 
-## Home
+## 1. Home
 
-#### Purpose
+### header
 
-To give the user a overview about what our product is and how to use it.
+**Components:**
 
-#### Overview
+- title
+- search field
+- submit button
+- account session:
+  - sign in or sign out
+  - user settings button
 
-Landing page, primary giving the user a sexy overview of the product with a quick and easy link to access the marketplace in many different forms and locations.
+### product list
 
-#### Other Notes
+Aggregated list is based off of the search results, or else we use the default view. The default view will include a predetermined assortment of products, which could be trending, top rated, random, etc.
 
-Devin has some bawlin' ideas for styling this. We can put the "competition" to shame.
+**Components:**
 
-## Marketplace
+- product
+    - image
+    - title
+    - description
+    - add to cart / purchase button
 
-#### Purpose
+### footer
 
-To give the user a place to browse coffee.
+Mostly for aesthetic, contains site name and contact info for a minimal MVP approach.
 
-#### Overview
+**Components:**
 
-This will be a major feature that provides the user with a sexy, fun and intuitive system for browsing coffee. From this page the user will be able to look at a product more specifically on it's respective page, however product pages are seperate from this page.
+- title
+- contact (email address)
 
-This page is a *virtual storefront*, ideally with targeted content for each specific user (!MVP), but will at its core, be a place with recent additions to the coffee selection, trending coffee, top sellers, etc.
+## 2. Product
 
-#### Other Notes
+Detailed information about the product listed here.
 
-Think of this page as the "Steam Storefront."
+**Components:**
 
-## Vendor
+- image(s)
+- description
+- place of origin
+- roast type
+- cost
+- add to cart / purchase button
 
-#### Purpose
+## 3. Checkout Confirmation
 
-Provide the user with a vendor specific page for viewing all products and vendor information.
+List items for purchase, with form for entering transaction details.
 
-#### Overview
+**Components:**
 
-This will give the user a page to reference for particular vendors (e.g. Pablos Coffee). There are two specific items of value for this page:
+- product summarization
+   - image
+   - name
+   - cost
+- transaction form:
+  -  shipping / billing
+    - first name
+    - last name
+    - address
+    - zip
+    - city
+    - state
+    - billing info
+      - credit card
+      - CCV
+      - ?
 
-1. Vendor info (location, company info, etc.)
-2. Listing of vendor's products
+## 3.1 Signup Modal
 
-This is a GREAT place for vendors to list their products in a sexy, clean and intuitive format.
+This will display if the user isn't signed in and has completed their transaction thus far anonymously. This will give the user the opportunity to create a password to associate with the email they've entered. Once the user has created the account, they will be signed in and redirected back to the checkout complete page.
 
-#### Other Notes
+Alternatively, the user may continue as an anonymous user and complete their purchase without signing up.
 
-This can be a FUCKING SHALOM MONEY MAKER.
+**Components:**
 
-Now all of a sudden, vendors (particularly small ones) don't have the overhead of creating an functioning online storefront for their products.
+- title
+- information text (why this popped up and why they should sign up)
+- email (editable)
+- password
+- password confirmation
+- remember billing info option
+- "no thanks button"
+- "signup and continue"
 
-We've built that for them, they just populate it with content and hit "save." Not only is this hugely appealing for vendors to use our product, it also could be a potential point for us to charge the vendors to use our site.
+## 4. Checkout Complete
 
-For example, we could have a *free version*, which lets them add up to 3 products. A *medium version* and a *pro version*, which respectively allow for more and more coffee to be sold on the marketplace.
+This is primarily just a confirmation page that lets the user know that there order has been placed. This will also include an automated email which will be dispatched to the vendor AND the customer.
 
-## Product
+**Components:**
 
-#### Purpose
+- title
+- information text (info about their successful or unsuccessful transaction)
+- summary of items purchased
+- "back home" button
 
-Provide the user with an individual page that gives detailed info for a given  product.
+## 5. User Settings
 
-#### Overview
+Let user update personal information.
 
-This page will be at the very core, one of the most important and complex pages on Grndz. This will have the images, info, tasting notes, vendor info, comments, rating, etc. The page has all the information a user needs to make a purchase.
+**Components:**
 
-#### Other Notes
+-  shipping / billing
+  - first name
+  - last name
+  - address
+  - zip
+  - city
+  - state
+  - billing info
+    - credit card #
 
-There are MANY subcomponents in the page which can be broken apart functionally in this page. They should be relatively easy to implement as vertical slices of functionality.
+----
 
-## Vendor Settings
+### Glossary
 
-#### Purpose
-
-Provide the *vendor* with an access panel for managing their brand and associated products.
-
-#### Overview
-
-Vendors must be able to manage their:
-
-1. account settings
-2. vendor settings
-3. product settings
-
-The underlying goal is to create a place for the vendors to "CRUD" their products and create / update their brand. This is an admin panel for vendors.
-
-#### Other Notes
-
-These are prime candidates for being broken into separate pages in and of themselves.
-
-### Customer
-
-#### Settings
-
-##### Purpose
-
-Provide the user with a place to modify their account settings, and see relevant info about their account.
-
-##### Overview
-
-Users must be able to manage their account settings (e.g. email, password, billing, shipping, etc.)
-
-#### Shipment Tracking
-
-##### Purpose
-
-To provide the user with a page to view their recent orders and relevant info.
-
-## Checkout
-
-### "Register"
-
-#### Purpose
-
-Provide the customer with a place to enter their billing / shipping info, sign in.
-
-### Confirmation
-
-##### Purpose
-
-Provide the customer a place to review and place their finalized order.
-
-##### Other Notes
-
-I'd like to roll our own checkout system at some point, to avoid having to pay a cut to use a prefabricated solution like PayPal.
-
-### Complete
-
-#### Purpose
-
-Provide the customer with a visual confirmation that they've successfully completed their purchase, while displaying relevant information.
-
-## Sign In
-
-### Purpose
-
-To let vendors and customers sign into with their accounts.
+- **product**: coffee
