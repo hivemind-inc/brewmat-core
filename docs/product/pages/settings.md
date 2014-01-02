@@ -25,4 +25,6 @@ Billing info handled via Stripe?
 
 ## Actionable: Save Settings
 
+>Save Settings
+
 - Commit user settings to DB, if valid.

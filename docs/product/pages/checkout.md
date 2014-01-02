@@ -8,27 +8,41 @@ Indicates to the user their current status in the purchase progress.
 2. [ACTIVE] checkout
 3. review & submit
 
-## Component: Product Shipping Information
-
-1. product image
-2. product title
-2. shipping cost
-3. shipping info (shipping speed)
-
-## Component: User Shipping Information
-
-Users shipping information, prepoulated if possible.
-
 ## Component: User Billing Information [Stripe]
 
 Users billing information, prepoulated if possible.
+
+## Component: User Shipping Information
+
+SC1: Same as Billing Info
+
+- Toggle for populating shipping information with billing information.
+
+SC2: Billing Information Fields
+
+Users shipping information, prepoulated if possible.
+
+1. first name
+2. last name
+3. address
+4. city
+5. state
+6. zip code
+
+## Component: Save Information
+
+- Toggle for saving user's info for future purchases.
 
 ---
 
 ## Actionable: Edit My Order
 
+>Edit My Order
+
 - Allow the user to move backwards to the cart page to edit their order.
 
-## Actionable: Review / Place Order
+## Actionable: Review Order
+
+>Review My Order
 
 - If fields are valid, continue to review / place order page.

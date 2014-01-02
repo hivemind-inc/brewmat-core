@@ -13,10 +13,11 @@ description and / or additional items of information (e.g reviews in the future)
 4. product cost
 5. product quantity (lbs / oz)
 6. purchase controls
+  - subscription interval
   - add to cart
   - buy now
 
 ## Component: Purchase Controls
 
-1. add to cart
-2. buy now
+1. add to cart (actionable, flash notice)
+2. buy now (actionable, continue to cart page)

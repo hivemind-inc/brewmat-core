@@ -17,19 +17,22 @@ Copy of the home page's product "block" plus some, for each product.
 3. product cost
 4. product quantity (lbs / oz)
 5. product quantity (# of units)
-6. Remove product
+6. subscription interval
+7. shipping cost
+8. shipping info (shipping speed)
+9. Remove product (actionable)
 
 ---
 
 ## Actionable: Continue Shopping
 
-Actions:
+>Continue Shopping
 
 - Return user back to home page.
 
 ## Actionable: Proceed to Checkout
 
-Actions:
+>Proceed to Checkout
 
 - Triggers the sign-in modal if the user isn't signed in.
-- Continue the user to the checkout page.
+- Else, continue the user to the checkout page.

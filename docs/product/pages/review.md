@@ -8,29 +8,35 @@ Indicates to the user their current status in the purchase progress.
 2. checkout
 3. [ACTIVE] review & submit
 
+## Component: Billing Information
+
+Non-editable fields with user's billing info.
+
+## Component: Shipping Information
+
+Non-editable fields with user's shipping info.
+
 ## Component: Transaction Summary
 
-Includes:
+Non-editable fields with user's product info, per product:
 
-SC1: Shipping Information
-
-SC2: Billing Information
-
-SC3: Product Summary
-
-SC4: Shipping Summary
+1. product title
+2. product cost
+3. product quantity
+4. product shipping cost
+5. subscription interval
 
 ---
 
 ## Actionable: Edit My Order
 
-Action:
+>Edit My Order
 
 - Allow the user to move backwards to the checkout page to edit their order.
 
 ## Actionable: Place Order Controls
 
-Action:
+>Submit My Order
 
 - Submit transaction to vendor.
 - Dispatch confirmation to customer.
