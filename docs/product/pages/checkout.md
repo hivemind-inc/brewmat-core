@@ -35,7 +35,9 @@ Users shipping information, prepoulated if possible.
 
 ---
 ## Actionable: Add Items to My Order
+>Add to My Order
 - Have a sidebar with items that are purchased with items in their cart. (secondary sale)
+- Have it dynamically update their shopping cart based on what they added.
 
 
 ## Actionable: Edit My Order
