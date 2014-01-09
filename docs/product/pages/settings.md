@@ -21,6 +21,10 @@ To be populated with / from shipping information.
 
 Billing info handled via Stripe?
 
+## Component: Order History
+  > This is some MVP shiz....
+
+-OLOLOLOLOLOLL
 ---
 
 ## Actionable: Save Settings
