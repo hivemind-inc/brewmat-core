@@ -34,6 +34,9 @@ Users shipping information, prepoulated if possible.
 - Toggle for saving user's info for future purchases.
 
 ---
+## Actionable: Add Items to My Order
+- Have a sidebar with items that are purchased with items in their cart. (secondary sale)
+
 
 ## Actionable: Edit My Order
 
