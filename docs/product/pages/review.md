@@ -27,7 +27,9 @@ Non-editable fields with user's product info, per product:
 5. subscription interval
 
 ---
+
 ## Actionable: Add Items to My Order
+
 >Add to My Order
 
 - Have a sidebar with items that are purchased with items in their cart. (secondary sale)
