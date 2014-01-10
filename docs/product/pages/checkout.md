@@ -10,7 +10,7 @@ Indicates to the user their current status in the purchase progress.
 
 ## Component: User Billing Information [Stripe]
 
-Users billing information, prepoulated if possible.
+Users billing information, prepopulated if possible.
 
 ## Component: User Shipping Information
 
