@@ -2,6 +2,9 @@
 
 ## Component: Product Image(s)
 
+This should include, ideally, multiple images which can be navigated by the user,
+potentially via some basic controls (MVP: BS carousel).
+
 ## Component: Product Overview
 
 Similar to the home page's product "block," however will contain a more verbose
