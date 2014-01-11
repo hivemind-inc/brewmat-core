@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-GrndzApp::Application.config.secret_key_base = 'f9b57b1cf4c06d4d56f86078a67ff031ea539fd7325358f387f6730d95b19f8fa535f7368cfa64c1ce08a2180c6b26a327f843cabc864ab333831a2c407cb070'
+GrndzApp::Application.config.secret_key_base = 'd9c00f83df15b14719cbd37ac6b24953079a658c4c1a7cdf692ec87a2050af27085a4df034f592fb63f024fdd5c1e80344499d723a1927247fecf673b66a480f'
