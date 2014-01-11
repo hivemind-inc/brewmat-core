@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'pg'
 
+gem 'slim'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
