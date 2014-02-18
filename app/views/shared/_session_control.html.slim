@@ -1,0 +1,14 @@
+#sessionsModal.modal.fade aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1"
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close aria-hidden="true" data-dismiss="modal" type="button"
+        h3#sessionsModalLabel.modal-title.text-center BOOM
+      .modal-body
+        .row
+          .col-md-6
+            h4.text-center Sign In
+            = render 'shared/signin_form'
+          .col-md-6
+            h4.text-center Sign Up
+            = render 'shared/signup_form'
