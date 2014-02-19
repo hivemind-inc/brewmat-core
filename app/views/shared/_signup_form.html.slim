@@ -1,16 +1,21 @@
-form role="form"
-  .form-group
-    label for="signupEmail"
-    input#signupEmail.form-control placeholder="enter email" type="email"
-  .form-group
-    label for="signupPassword"
-    input#signupPassword.form-control placeholder="password" type="password"
-  .form-group
-    label for="signupPasswordConfirmation"
-    input#signupPasswordConfirmation.form-control placeholder="password confirmation" type="password"
-  .checkbox
-    label
-      input type="checkbox"
-        | I agree to the Grndz Terms of Service.
+#signupModal.modal.fade aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1"
+  .modal-dialog
+    .modal-content
+      .modal-title.text-center
+        h3 Create an Account
+      .modal-body
+        form role="form"
+          .form-group
+            label for="signupEmail"
+            input#signupEmail.form-control placeholder="enter email" type="email"
+          .form-group
+            label for="signupPassword"
+            input#signupPassword.form-control placeholder="password" type="password"
+          .form-group
+            label for="signupPasswordConfirmation"
+            input#signupPasswordConfirmation.form-control placeholder="password confirmation" type="password"
 
-  button.btn.btn-primary.pull-right type="submit" Create Account
+          .modal-footer
+            .btn-group.pull-right
+              button.btn.btn-default data-dismiss="modal" Cancel
+              button.btn.btn-primary type="submit" Create Account

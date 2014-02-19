@@ -1,9 +1,18 @@
-form role="form"
-  .form-group
-    label for="signinEmail"
-    input#signinEmail.form-control placeholder="enter email" type="email"
-  .form-group
-    label for="signinPassword"
-    input#signinPassword.form-control placeholder="password" type="password"
+#signinModal.modal.fade aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1"
+  .modal-dialog
+    .modal-content
+      .modal-title.text-center
+        h3 Sign In
+      .modal-body
+        form role="form"
+          .form-group
+            label for="signinEmail"
+            input#signinEmail.form-control placeholder="enter email" type="email"
+          .form-group
+            label for="signinPassword"
+            input#signinPassword.form-control placeholder="password" type="password"
 
-  button.btn.btn-primary.pull-right type="submit" Sign IN!
+          .modal-footer
+            .btn-group.pull-right
+              button.btn.btn-default data-dismiss="modal" Cancel
+              button.btn.btn-primary type="submit" Sign In
