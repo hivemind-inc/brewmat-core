@@ -6,8 +6,10 @@ html
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   body
+
     = render 'shared/banner'
     = render 'shared/navbar'
+    = render 'shared/notices'
     = render 'shared/session_controls'
     = yield
     = render 'shared/footer'
