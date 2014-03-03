@@ -1,0 +1,35 @@
+header {
+  background-color: #fff;
+  height: 90px;
+  width: 100%;
+
+  nav.wrapper {
+    line-height: 75px;
+    margin: auto;
+    max-width: 960px;
+    padding-top: 12px;
+    text-align: center;
+
+    a {
+      position: relative;
+      bottom: 8px;
+      letter-spacing: .1em;
+      color: #bbb;
+      font-size: 15px;
+      font-family: "ag-bold",Helvetica,Arial,sans-serif;
+      text-transform: uppercase;
+    }
+
+    a:hover {
+      color: #333;
+      text-decoration: none;
+    }
+
+    a.title {
+      font-size: 44px;
+      padding: 0 80px 0 80px;
+      font-family: 'Tiempos Text',Georgia,serif;
+      color: #333;
+    }
+  }
+}

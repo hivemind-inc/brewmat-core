@@ -7,7 +7,9 @@ html
     = csrf_meta_tags
   body
 
-    = render 'shared/navbar'
+    = render 'shared/header'
     = render 'shared/notices'
     = yield
+    = render 'shared/placeholder'
+    = render 'shared/contact'
     = render 'shared/footer'
