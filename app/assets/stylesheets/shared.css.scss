@@ -1,7 +1,8 @@
 footer {
   background-color: #eeeeee;
   bottom: 0;
-  height: 90px;
+  height: 70px;
+  line-height: 35px;
   position: absolute;
   width: 100%;
 }
@@ -9,8 +10,4 @@ footer {
 .navbar-brand span:last-of-type {
   font-size: 23px;
   padding-left: 20px;
-}
-
-.jumbotron {
-  margin-top: 50px;
 }

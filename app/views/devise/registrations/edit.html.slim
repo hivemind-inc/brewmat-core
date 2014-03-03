@@ -1,0 +1,31 @@
+.session-container
+
+  h2 Edit Account
+
+  hr
+
+  = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
+    = devise_error_messages!
+
+    h4 Email
+    .form-group
+      = f.email_field :email, autofocus: true, class: "form-control", value: "#{current_user.email}"
+
+    - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+      div Currently waiting confirmation for: #{resource.unconfirmed_email}
+
+    hr
+
+    h4 Password
+    .form-group
+      = f.password_field :password_confirmation, class: "form-control", placeholder: "password confirmation"
+    .form-group
+      = f.password_field :current_password, class: "form-control", placeholder: "password "
+
+    hr
+
+    h4 Verify
+    .form-group
+      = f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "current password"
+
+    = f.submit "Update", class: "button btn btn-primary"

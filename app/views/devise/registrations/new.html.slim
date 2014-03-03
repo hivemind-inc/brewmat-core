@@ -1,0 +1,18 @@
+#signUp.session-container
+  h2 Sign up
+  = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+    = devise_error_messages!
+    .form-group
+      = f.email_field :email, autofocus: true, class: "form-control", placeholder: "email"
+    .form-group
+      = f.password_field :password, class: "form-control", placeholder: "password"
+    .form-group
+      = f.password_field :password_confirmation, class: "form-control", placeholder: "password confirmation"
+
+    = f.submit "Sign up", class: "button btn btn-primary"
+
+  hr
+
+  .text-center
+    | Already have an account?
+    = link_to "Sign in here.", new_session_path(resource_name)

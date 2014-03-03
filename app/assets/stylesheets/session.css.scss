@@ -1,0 +1,23 @@
+.session-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+
+  .button { width: 100%; }
+
+  h2 { text-align: center; }
+
+  a:first-of-type { padding-right: 7px;}
+  a:last-of-type  { padding-left: 7px;}
+}
+
+#error_explanation {
+  h2 {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  border: 1px solid;
+  margin-bottom: 15px;
+  padding: 10px;
+}
