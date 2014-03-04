@@ -1,23 +1,29 @@
 header {
   background-color: #fff;
-  height: 90px;
+  min-height: 90px;
   width: 100%;
+  padding: 0 20px 0 20px;
 
   nav.wrapper {
     line-height: 75px;
     margin: auto;
-    max-width: 960px;
+    max-width: 1240px;
     padding-top: 12px;
-    text-align: center;
 
-    a {
-      position: relative;
+    span a {
       bottom: 8px;
-      letter-spacing: .1em;
       color: #bbb;
-      font-size: 15px;
       font-family: "ag-bold",Helvetica,Arial,sans-serif;
+      font-size: 15px;
+      letter-spacing: .1em;
+      position: relative;
       text-transform: uppercase;
+      margin-right: 25px;
+    }
+
+    a.active {
+      border-bottom: 3px solid #333;
+      color: #333;
     }
 
     a:hover {
@@ -25,11 +31,11 @@ header {
       text-decoration: none;
     }
 
-    a.title {
-      font-size: 44px;
-      padding: 0 80px 0 80px;
-      font-family: 'Tiempos Text',Georgia,serif;
+    a.title{
       color: #333;
+      font-family: 'Tiempos Text',Georgia,serif;
+      font-size: 44px;
+      padding-right: 40px;
     }
   }
 }
