@@ -32,11 +32,15 @@ header {
       text-decoration: none;
     }
 
-    a.title{
-      color: #333;
-      font-family: 'Tiempos Text',Georgia,serif;
-      font-size: 44px;
-      padding-right: 40px;
+    .title {
+      display: inline-block;
+
+      a {
+        color: #333;
+        font-family: 'Tiempos Text',Georgia,serif;
+        font-size: 34px;
+        padding-right: 40px;
+      }
     }
 
     a.button {
