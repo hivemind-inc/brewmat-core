@@ -16,11 +16,19 @@ ActiveRecord::Schema.define(version: 20140303195803) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "subscriptions", force: true do |t|
-    t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+#We need to add Primary Key IDs to this script.
+
+  create_table "subscription", force: true do |t|
+    #t.integer "SubscriptionID", default: "", null: false (Primary Key)
+    #t.datetime "SubscriptionEndDate", null: false
+    t.datetime "SubscriptionCreatedAt"
+    t.datetime "SubscriptionUpdatedAt"
+    #t.integer "UserID" (Foreign Key)
+    #t.integer "ProductID" (Foreign Key)
   end
+
+#We can leave this alone as I created a "UsersGrndz" Table with a UserID that we can use inside of our system and devise will be able to 
+#pull from the email since they're related.
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
