@@ -38,4 +38,17 @@ header {
       padding-right: 40px;
     }
   }
+
+  a.button {
+    background: #38434d;
+    color: #fff;
+    float: right;
+    font-family: "ag-bold",Helvetica,Arial,sans-serif;
+    font-size: .75em;
+    font-weight: 700;
+    letter-spacing: .2em;
+    margin-top: 15px;
+    padding: 1.25em 2em;
+    text-transform: uppercase;
+  }
 }

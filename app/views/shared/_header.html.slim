@@ -8,3 +8,6 @@ header
         a href='/users/sign_out' data-method='delete' sign out
       - else
         a class=(params[:action] == 'new' ? 'active' : 'inactive') href='/users/sign_in' sign in
+
+    - if params[:action] == 'index'
+      a.button.btn href="#contact" get in touch
