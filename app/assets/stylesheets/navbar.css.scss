@@ -23,6 +23,7 @@ header {
 
     a.active {
       border-bottom: 3px solid #333;
+      padding-bottom: 3px;
       color: #333;
     }
 
@@ -37,18 +38,27 @@ header {
       font-size: 44px;
       padding-right: 40px;
     }
-  }
 
-  a.button {
-    background: #38434d;
-    color: #fff;
-    float: right;
-    font-family: "ag-bold",Helvetica,Arial,sans-serif;
-    font-size: .75em;
-    font-weight: 700;
-    letter-spacing: .2em;
-    margin-top: 15px;
-    padding: 1.25em 2em;
-    text-transform: uppercase;
+    a.button {
+      background: #38434d;
+      color: #fff;
+      float: right;
+      font-family: "ag-bold",Helvetica,Arial,sans-serif;
+      font-size: .75em;
+      font-weight: 700;
+      letter-spacing: .2em;
+      margin-top: 15px;
+      padding: 1.25em 2em;
+      text-transform: uppercase;
+      border-radius: 0;
+    }
+
+    a.button:hover {
+      color: #fff;
+      background: #1c2126;
+      -webkit-transition: background .25s;
+      -moz-transition: background .25s;
+      transition: background .25s;
+    }
   }
 }
