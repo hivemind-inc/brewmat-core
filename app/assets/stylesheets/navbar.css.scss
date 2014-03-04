@@ -54,10 +54,10 @@ header {
     }
 
     a.button:hover {
-      color: #fff;
-      background: #1c2126;
-      -webkit-transition: background .25s;
       -moz-transition: background .25s;
+      -webkit-transition: background .25s;
+      background: #1c2126;
+      color: #fff;
       transition: background .25s;
     }
   }
