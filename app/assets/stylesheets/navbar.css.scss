@@ -41,6 +41,7 @@ header {
 
     a.button {
       background: #38434d;
+      border-radius: 0;
       color: #fff;
       float: right;
       font-family: "ag-bold",Helvetica,Arial,sans-serif;
@@ -50,7 +51,6 @@ header {
       margin-top: 15px;
       padding: 1.25em 2em;
       text-transform: uppercase;
-      border-radius: 0;
     }
 
     a.button:hover {
