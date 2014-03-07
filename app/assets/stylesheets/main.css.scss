@@ -1,5 +1,21 @@
-body {
-  background: #f2efe9;
-  font-family: 'Tiempos Text',Georgia,serif;
+* {
+  -webkit-backface-visibility: hidden;
   -webkit-font-smoothing: antialiased;
+}
+
+body {
+
+  font-family: europa, sans-serif;
+}
+
+.homepage {
+  background-color: #f2efe9;
+}
+
+.brand-font {
+  font-family: 'Tiempos Text',Georgia,serif;
+}
+
+.primary-font {
+  font-family: europa, sans-serif;
 }
