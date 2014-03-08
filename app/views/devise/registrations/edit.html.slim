@@ -1,6 +1,6 @@
 .session-container
-  = render 'sessions/header'
-  h2 Edit Account
+  = render partial: 'sessions/header', locals: {sub_title: "modify account"}
+
   p Update account settings.
 
   = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|

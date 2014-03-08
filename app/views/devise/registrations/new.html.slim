@@ -1,6 +1,5 @@
 #signUp.session-container
-  = render 'sessions/header'
-  h2 create account
+  = render partial: 'sessions/header', locals: {sub_title: "create account"}
   = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
     = devise_error_messages!
     .form-group

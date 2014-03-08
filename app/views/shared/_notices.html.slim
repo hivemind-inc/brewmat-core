@@ -1,6 +1,5 @@
-- if notice
-  .container
-    p.alert.alert-info = notice
-- if alert
-  .container
-    p.alert.alert-danger = alert
+#notifications
+  - if notice
+    p.alert = notice
+  - if alert
+    p.alert = alert

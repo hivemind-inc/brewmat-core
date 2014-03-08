@@ -1,6 +1,5 @@
 #signIn.session-container
-  = render 'sessions/header'
-  h2.primary-font welcome back
+  = render partial: 'sessions/header', locals: {sub_title: "welcome back"}
   = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
     .form-group
       = f.email_field :email, autofocus: true, class: "form-control", placeholder: "Your Email"
