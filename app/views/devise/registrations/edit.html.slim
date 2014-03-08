@@ -1,22 +1,17 @@
 .session-container
-
+  h1.brand-font Grndz Coffee Co.
   h2 Edit Account
-
-  hr
+  p Update account settings.
 
   = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
     = devise_error_messages!
 
-    h4 Email
     .form-group
       = f.email_field :email, autofocus: true, class: "form-control", value: "#{current_user.email}"
 
     - if devise_mapping.confirmable? && resource.pending_reconfirmation?
       div Currently waiting confirmation for: #{resource.unconfirmed_email}
 
-    hr
-
-    h4 Password
     .form-group
       = f.password_field :password_confirmation, class: "form-control", placeholder: "password confirmation"
     .form-group
@@ -24,7 +19,8 @@
 
     hr
 
-    h4 Verify
+    p Enter your current password before saving changes.
+
     .form-group
       = f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "current password"
 
