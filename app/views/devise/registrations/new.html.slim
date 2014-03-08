@@ -1,4 +1,5 @@
 #signUp.session-container
+  h1.brand-font Grndz Coffee Co.
   h2 Sign up
   = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
     = devise_error_messages!
@@ -11,8 +12,10 @@
 
     = f.submit "Sign up", class: "button btn btn-primary"
 
+
+  a.box-link href=new_session_path(resource_name)
+    | just kidding, i have an account
+
   hr
 
-  .text-center
-    | Already have an account?
-    = link_to "Sign in here.", new_session_path(resource_name)
+  = render "shared/sessions_footer"
