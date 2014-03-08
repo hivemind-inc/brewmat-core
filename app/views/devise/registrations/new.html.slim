@@ -4,18 +4,15 @@
   = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
     = devise_error_messages!
     .form-group
-      = f.email_field :email, autofocus: true, class: "form-control", placeholder: "email"
+      = f.email_field :email, autofocus: true, class: "form-control", placeholder: "Your Email"
     .form-group
-      = f.password_field :password, class: "form-control", placeholder: "password"
+      = f.password_field :password, class: "form-control", placeholder: "Password"
     .form-group
-      = f.password_field :password_confirmation, class: "form-control", placeholder: "password confirmation"
+      = f.password_field :password_confirmation, class: "form-control", placeholder: "Password Confirmation"
 
     = f.submit "Sign up", class: "button btn btn-primary"
 
-
   a.box-link href=new_session_path(resource_name)
     | just kidding, i have an account
-
-  hr
 
   = render "shared/sessions_footer"
