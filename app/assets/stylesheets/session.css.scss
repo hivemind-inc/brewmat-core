@@ -14,11 +14,17 @@
     margin-bottom: 20px;
   }
 
-  h1 {
-    font-size: 46px;
-    margin-bottom: 20px;
-    font-weight: 600;
-    color: #000;
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+
+    h1 {
+      font-size: 46px;
+      margin-bottom: 20px;
+      font-weight: 600;
+      color: #000;
+    }
   }
 
   h2 {
