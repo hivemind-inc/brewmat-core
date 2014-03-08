@@ -1,7 +1,7 @@
 .session-container
   h1.brand-font Grndz Coffee Co.
   h2 forgot password
-  p Enter your username or email address to reset your password.
+  p Enter your email address to reset your password.
   = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
     = devise_error_messages!
     .form-group
