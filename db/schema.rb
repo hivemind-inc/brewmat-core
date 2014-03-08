@@ -39,20 +39,20 @@ ActiveRecord::Schema.define(version: 20140308220041) do
     t.string  "tasting_notes"
   end
 
+  create_table "products_transactions", force: true do |t|
+    t.integer "transaction_id"
+    t.integer "product_id"
+    t.integer "quantity"
+  end
+
   create_table "transaction_states", force: true do |t|
     t.integer "transaction_id"
     t.string  "description"
   end
 
   create_table "transactions", force: true do |t|
-    t.integer "user_id",  null: false
+    t.integer "user_id"
     t.integer "state_id", null: false
-  end
-
-  create_table "transactions_products", force: true do |t|
-    t.integer "transaction_id"
-    t.integer "product_id"
-    t.integer "quantity"
   end
 
   create_table "user_types", force: true do |t|
