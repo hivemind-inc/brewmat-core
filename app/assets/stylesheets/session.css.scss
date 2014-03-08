@@ -10,9 +10,15 @@
   margin-top: 60px;
   text-align: center;
 
-  h1 {
-    font-size: 62px;
+  form {
     margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 46px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #000;
   }
 
   h2 {
@@ -53,7 +59,6 @@
     border: 0;
     color: #fff;
     font-size: 17px;
-    font-weight: bold;
     height: 69px;
     letter-spacing: 2px;
     text-rendering: optimizeLegibility;
@@ -66,15 +71,16 @@
     }
   }
 
-  a.forgot-password {
+  a.box-link {
     color: #ccc;
     display: inline-block;
     margin-top: 30px;
+    margin: 30px 6px;
     font-weight: bold;
     font-size: 12px;
     text-transform: uppercase;
     border: solid 1px #ccc;
-    padding: 6px 18px 6px 18px;
+    padding: 8px 14px 8px 14px;
     letter-spacing: 1px;
     outline: none;
 
@@ -82,6 +88,29 @@
       text-decoration: none;
       color: #000;
       border: 1px solid #000;
+    }
+  }
+
+  .app-footer {
+
+    margin-top: 30px;
+    padding: 0;
+
+    li {
+      list-style: none;
+      display: inline-block;
+      font-size: 10px;
+      margin: 0 16px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+      a {
+        color: #000;
+        &:hover {
+          color: #ccc;
+          text-decoration: none;
+        }
+      }
     }
   }
 }
