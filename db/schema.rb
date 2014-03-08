@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140308211957) do
+ActiveRecord::Schema.define(version: 20140308220041) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,18 +29,19 @@ ActiveRecord::Schema.define(version: 20140308211957) do
   end
 
   create_table "products", force: true do |t|
+    t.decimal "price",           precision: 8, scale: 2
+    t.decimal "shapping_cost",   precision: 8, scale: 2
     t.float   "weight"
     t.integer "manufacturer_id"
     t.integer "type"
-    t.decimal "price",           precision: 8, scale: 2
-    t.decimal "shapping_cost",   precision: 8, scale: 2
     t.string  "description"
     t.string  "name"
     t.string  "tasting_notes"
   end
 
   create_table "transaction_states", force: true do |t|
-    t.string "description"
+    t.integer "transaction_id"
+    t.string  "description"
   end
 
   create_table "transactions", force: true do |t|
@@ -48,8 +49,15 @@ ActiveRecord::Schema.define(version: 20140308211957) do
     t.integer "state_id", null: false
   end
 
+  create_table "transactions_products", force: true do |t|
+    t.integer "transaction_id"
+    t.integer "product_id"
+    t.integer "quantity"
+  end
+
   create_table "user_types", force: true do |t|
-    t.string "description"
+    t.integer "user_id"
+    t.string  "description"
   end
 
   create_table "users", force: true do |t|
