@@ -126,3 +126,21 @@
     }
   }
 }
+
+#error_explanation span {
+    list-style: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    color: #a27c16;
+    border: solid 1px #a8860e;
+    background: #f5e6b2;
+    padding: 7px 19px;
+    border-radius: 100px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    margin-bottom: 15px;
+}

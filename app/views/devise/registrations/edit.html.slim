@@ -1,8 +1,6 @@
 .session-container
   = render partial: 'sessions/header', locals: {sub_title: "modify account"}
-
   p Update account settings.
-
   = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
     = devise_error_messages!
 
