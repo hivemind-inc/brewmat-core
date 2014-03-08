@@ -29,6 +29,11 @@
     text-transform: uppercase;
   }
 
+  p {
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+
   .form-control {
     &:focus {
       border-color: #000;
