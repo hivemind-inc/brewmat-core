@@ -1,5 +1,5 @@
 #signUp.session-container
-  h1.brand-font Grndz Coffee Co.
+  = render 'sessions/header'
   h2 create account
   = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
     = devise_error_messages!
@@ -15,4 +15,4 @@
   a.box-link href=new_session_path(resource_name)
     | just kidding, i have an account
 
-  = render "shared/sessions_footer"
+  = render "sessions/footer"

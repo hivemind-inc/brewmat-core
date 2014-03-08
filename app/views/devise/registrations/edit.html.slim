@@ -1,5 +1,5 @@
 .session-container
-  h1.brand-font Grndz Coffee Co.
+  = render 'sessions/header'
   h2 Edit Account
   p Update account settings.
 
@@ -25,3 +25,5 @@
       = f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "current password"
 
     = f.submit "Update", class: "button btn btn-primary"
+
+  = render "sessions/footer"

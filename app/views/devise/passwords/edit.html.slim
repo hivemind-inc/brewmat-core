@@ -1,5 +1,5 @@
 .session-container
-  h1.brand-font Grndz Coffee Co.
+  = render 'sessions/header'
   h2 Change your password
   p Enter a new password for your account.
   = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f|
@@ -13,4 +13,4 @@
     = f.submit "Change my password", class: "button btn btn-primary"
 
 
-  = render "shared/sessions_footer"
+  = render "sessions/footer"
