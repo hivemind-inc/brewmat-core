@@ -11,24 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140303195803) do
+ActiveRecord::Schema.define(version: 20140308184854) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-#We need to add Primary Key IDs to this script.
-
-  create_table "subscription", force: true do |t|
-    #t.integer "SubscriptionID", default: "", null: false (Primary Key)
-    #t.datetime "SubscriptionEndDate", null: false
-    t.datetime "SubscriptionCreatedAt"
-    t.datetime "SubscriptionUpdatedAt"
-    #t.integer "UserID" (Foreign Key)
-    #t.integer "ProductID" (Foreign Key)
+  create_table "subscriptions", force: true do |t|
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
-
-#We can leave this alone as I created a "UsersGrndz" Table with a UserID that we can use inside of our system and devise will be able to 
-#pull from the email since they're related.
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -43,6 +35,7 @@ ActiveRecord::Schema.define(version: 20140303195803) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "type_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
