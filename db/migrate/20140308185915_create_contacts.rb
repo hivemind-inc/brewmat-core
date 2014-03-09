@@ -2,6 +2,7 @@ class CreateContacts < ActiveRecord::Migration
   def change
     create_table :contacts do |t|
       t.belongs_to :user
+      t.belongs_to :vendor
 
       t.integer :user_id
       t.string :first_name

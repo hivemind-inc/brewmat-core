@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140309155013) do
+ActiveRecord::Schema.define(version: 20140309160219) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "contacts", force: true do |t|
     t.integer "user_id"
+    t.integer "vendor_id"
     t.string  "first_name"
     t.string  "last_name"
     t.string  "address"
@@ -34,10 +35,10 @@ ActiveRecord::Schema.define(version: 20140309155013) do
   end
 
   create_table "products", force: true do |t|
-    t.decimal "price",           precision: 8, scale: 2
-    t.decimal "shapping_cost",   precision: 8, scale: 2
+    t.integer "vendor_id"
+    t.decimal "price",         precision: 8, scale: 2
+    t.decimal "shapping_cost", precision: 8, scale: 2
     t.float   "weight"
-    t.integer "manufacturer_id"
     t.integer "type"
     t.string  "description"
     t.string  "name"
@@ -92,5 +93,8 @@ ActiveRecord::Schema.define(version: 20140309155013) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   add_index "users", ["unlock_token"], name: "index_users_on_unlock_token", unique: true, using: :btree
+
+  create_table "vendors", force: true do |t|
+  end
 
 end
