@@ -37,6 +37,8 @@ end
 
 group :development do
   gem 'letter_opener'
+  gem 'faker'
+  gem 'populator'
 end
 
 # Use ActiveModel has_secure_password

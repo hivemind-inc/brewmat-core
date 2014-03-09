@@ -4,12 +4,12 @@ class CreateProducts < ActiveRecord::Migration
       t.belongs_to :vendor
 
       t.decimal :price, :precision => 8, :scale => 2
-      t.decimal :shapping_cost, :precision => 8, :scale => 2
+      t.decimal :shipping_cost, :precision => 8, :scale => 2
       t.float :weight
       t.integer :type
-      t.string :description
       t.string :name
-      t.string :tasting_notes
+      t.text :description
+      t.text :tasting_notes
     end
   end
 end
