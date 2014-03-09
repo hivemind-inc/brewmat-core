@@ -57,19 +57,15 @@ ActiveRecord::Schema.define(version: 20140309165504) do
   end
 
   create_table "transactions", force: true do |t|
-    t.integer "user_id", null: false
-    t.integer "state_id", null: false
+    t.integer "user_id"
+    t.decimal "price",    precision: 8, scale: 2
+    t.integer "state_id",                         null: false
   end
 
   create_table "user_types", force: true do |t|
     t.integer "user_id"
     t.string  "description"
-    #t.integer "priviledges_id", null:false
   end
-  
-  #Phase 2 Priviledges Table
-  #create_table "priviledges", force: true do |t|
-  #t.priviledge_description, null: false
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "",    null: false

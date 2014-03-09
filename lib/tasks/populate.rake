@@ -1,4 +1,5 @@
 NUMBER_OF_USERS = 100
+TRANSACTIONS_PER_USER = 5
 
 namespace :db do
   desc "Erase and fill database"
@@ -6,7 +7,7 @@ namespace :db do
     require 'populator'
     require 'faker'
 
-    [User, Contact].each(&:delete_all)
+    [User, Contact, Transaction].each(&:delete_all)
 
     User.populate NUMBER_OF_USERS do |user|
       user.email              = Faker::Internet.email
@@ -24,10 +25,22 @@ namespace :db do
       contact.country            = Faker::Address.country
     end
 
+    Transaction.populate NUMBER_OF_USERS * TRANSACTIONS_PER_USER do |transaction|
+      transaction.state_id = Faker::Number.digit
+    end
+
     # associate: user => contact
     contacts = Contact.all
     User.all.each_with_index do |user, index|
       user.contacts << contacts[index]
+    end
+
+    # associate user => transaction
+    transactions = Transaction.all
+    User.all.each_with_index do |user, index|
+      TRANSACTIONS_PER_USER.times do |multiplier|
+        user.transactions << transactions[index * multiplier]
+      end
     end
   end
 end
