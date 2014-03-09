@@ -1,5 +1,6 @@
 NUMBER_OF_USERS = 100
 TRANSACTIONS_PER_USER = 5
+PRODUCTS_PER_TRANSACTION = 2
 
 namespace :db do
   desc "Erase and fill database"
@@ -7,7 +8,7 @@ namespace :db do
     require 'populator'
     require 'faker'
 
-    [User, Contact, Transaction].each(&:delete_all)
+    [User, Contact, Transaction, Product].each(&:delete_all)
 
     User.populate NUMBER_OF_USERS do |user|
       user.email              = Faker::Internet.email
@@ -29,6 +30,16 @@ namespace :db do
       transaction.state_id = Faker::Number.digit
     end
 
+    Product.populate NUMBER_OF_USERS * TRANSACTIONS_PER_USER * PRODUCTS_PER_TRANSACTION do |product|
+      product.price         = Faker::Number.number(2)
+      product.shipping_cost = Faker::Number.digit
+      product.weight        = Faker::Number.digit
+      product.type_id       = Faker::Number.digit
+      product.name          = Faker::Commerce.product_name
+      product.description   = Faker::Lorem.paragraph(2)
+      product.tasting_notes = Faker::Lorem.paragraph(1)
+    end
+
     # associate: user => contact
     contacts = Contact.all
     User.all.each_with_index do |user, index|
@@ -40,6 +51,14 @@ namespace :db do
     User.all.each_with_index do |user, index|
       TRANSACTIONS_PER_USER.times do |multiplier|
         user.transactions << transactions[index * multiplier]
+      end
+    end
+
+    # associate transaction => products
+    products = Product.all
+    Transaction.all.each_with_index do |transaction, index|
+      PRODUCTS_PER_TRANSACTION.times do |multiplier|
+        transaction.products << products[index * multiplier]
       end
     end
   end

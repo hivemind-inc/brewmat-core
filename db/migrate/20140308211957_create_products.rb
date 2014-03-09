@@ -6,7 +6,7 @@ class CreateProducts < ActiveRecord::Migration
       t.decimal :price, :precision => 8, :scale => 2
       t.decimal :shipping_cost, :precision => 8, :scale => 2
       t.float :weight
-      t.integer :type
+      t.integer :type_id
       t.string :name
       t.text :description
       t.text :tasting_notes
