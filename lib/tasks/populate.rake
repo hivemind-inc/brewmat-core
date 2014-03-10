@@ -1,4 +1,6 @@
-NUMBER_OF_USERS = 100
+USERS        = 100
+TRANSACTIONS = 5
+PRODUCTS     = 2
 
 namespace :db do
   desc "Erase and fill database"
@@ -6,28 +8,78 @@ namespace :db do
     require 'populator'
     require 'faker'
 
-    [User, Contact].each(&:delete_all)
+    [User, Contact, Transaction, Product].each(&:delete_all)
 
-    User.populate NUMBER_OF_USERS do |user|
+    puts "create users"
+    User.populate USERS do |user|
       user.email              = Faker::Internet.email
       user.encrypted_password = Faker::Internet.password
     end
 
-    Contact.populate NUMBER_OF_USERS do |contact|
-      contact.first_name         = Faker::Name.first_name
-      contact.last_name          = Faker::Name.last_name
-      contact.address            = Faker::Address.street_address
-      contact.secondary_address  = Faker::Address.secondary_address
-      contact.city               = Faker::Address.city
-      contact.state              = Faker::Address.state_abbr
-      contact.zipcode            = Faker::Address.zip
-      contact.country            = Faker::Address.country
+    puts "creating contacts"
+    Contact.populate USERS do |c|
+      c.first_name         = Faker::Name.first_name
+      c.last_name          = Faker::Name.last_name
+      c.address            = Faker::Address.street_address
+      c.secondary_address  = Faker::Address.secondary_address
+      c.city               = Faker::Address.city
+      c.state              = Faker::Address.state_abbr
+      c.zipcode            = Faker::Address.zip
+      c.country            = Faker::Address.country
     end
 
-    # associate: user => contact
-    contacts = Contact.all
-    User.all.each_with_index do |user, index|
-      user.contacts << contacts[index]
+    puts "create transactions"
+    Transaction.populate USERS * TRANSACTIONS do |t|
+      t.price             = "#{Faker::Number.number(3)}.#{Faker::Number.number(2)}"
     end
+
+    puts "creating transaction states"
+    TransactionState.populate USERS * TRANSACTIONS do |ts|
+      ts.description = Faker::Lorem.sentence(1)
+    end
+
+    puts "creating products"
+    Product.populate USERS * TRANSACTIONS * PRODUCTS do |p|
+      p.price         = "#{Faker::Number.number(2)}.#{Faker::Number.number(2)}"
+      p.shipping_cost = Faker::Number.digit
+      p.weight        = Faker::Number.digit
+      p.name          = Faker::Commerce.product_name
+      p.description   = Faker::Lorem.paragraph(2)
+      p.tasting_notes = Faker::Lorem.paragraph(1)
+    end
+
+    # TODO "creating product types"
+
+    ### BUILD ASSOCIATIONS ###
+
+    puts "associating user << contact"
+    contacts = Contact.all
+    User.all.each_with_index do |u, i|
+      u.contacts << contacts[i]
+    end
+
+    puts "associating user << transactions"
+    transactions = Transaction.all
+    User.all.each_with_index do |user, i|
+      TRANSACTIONS.times do |multiplier|
+        user.transactions << transactions[i * multiplier]
+      end
+    end
+
+    puts "associating transaction << transaction_state"
+    transaction_states = TransactionState.all
+    Transaction.all.each_with_index do |t, i|
+      t.update(transaction_state: transaction_states[i])
+    end
+
+    puts "associating transaction << products"
+    products = Product.all
+    Transaction.all.each_with_index do |t, i|
+      PRODUCTS.times do |multiplier|
+        t.products << products[i * multiplier]
+      end
+    end
+
+    # TODO "associating products << product_type"
   end
 end

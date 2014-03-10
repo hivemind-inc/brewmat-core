@@ -1,4 +1,4 @@
-class DeviseCreateUsers < ActiveRecord::Migration
+class CreateUsers < ActiveRecord::Migration
   def change
     create_table(:users) do |t|
       ## Database authenticatable
@@ -30,6 +30,9 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string   :unlock_token # Only if unlock strategy is :email or :both
       t.datetime :locked_at
 
+      ## Grndz Specific
+      t.integer :type_id, default: 0
+      t.boolean :subscribed, default: false
 
       t.timestamps
     end
