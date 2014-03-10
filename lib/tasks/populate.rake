@@ -27,14 +27,13 @@ namespace :db do
     end
 
     Transaction.populate NUMBER_OF_USERS * TRANSACTIONS_PER_USER do |transaction|
-      transaction.state_id = Faker::Number.digit
+      transaction.transaction_state_id = Faker::Number.digit
     end
 
     Product.populate NUMBER_OF_USERS * TRANSACTIONS_PER_USER * PRODUCTS_PER_TRANSACTION do |product|
       product.price         = Faker::Number.number(2)
       product.shipping_cost = Faker::Number.digit
       product.weight        = Faker::Number.digit
-      product.type_id       = Faker::Number.digit
       product.name          = Faker::Commerce.product_name
       product.description   = Faker::Lorem.paragraph(2)
       product.tasting_notes = Faker::Lorem.paragraph(1)
@@ -54,6 +53,8 @@ namespace :db do
       end
     end
 
+    # TODO: associate a transaction_state w/ transaction
+
     # associate transaction w/ products
     products = Product.all
     Transaction.all.each_with_index do |transaction, index|
@@ -61,5 +62,7 @@ namespace :db do
         transaction.products << products[index * multiplier]
       end
     end
+
+    # TODO: associate product_type w/ products
   end
 end
