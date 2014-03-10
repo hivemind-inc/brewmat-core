@@ -62,14 +62,8 @@ ActiveRecord::Schema.define(version: 20140310002427) do
   end
 
   create_table "transactions", force: true do |t|
-<<<<<<< HEAD
-    t.integer "user_id",                          null: false
-    t.decimal "price",    precision: 8, scale: 2
-    t.integer "state_id",                         null: false
-=======
     t.integer "user_id"
     t.decimal "price",   precision: 8, scale: 2
->>>>>>> 4961ee779b8c69b278c0b885ec40c32f671f99b4
   end
 
   create_table "user_types", force: true do |t|
