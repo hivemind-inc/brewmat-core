@@ -40,13 +40,13 @@ namespace :db do
       product.tasting_notes = Faker::Lorem.paragraph(1)
     end
 
-    # associate: user => contact
+    # associate: user w/ contact
     contacts = Contact.all
     User.all.each_with_index do |user, index|
       user.contacts << contacts[index]
     end
 
-    # associate user => transaction
+    # associate user w/ transaction
     transactions = Transaction.all
     User.all.each_with_index do |user, index|
       TRANSACTIONS_PER_USER.times do |multiplier|
@@ -54,7 +54,7 @@ namespace :db do
       end
     end
 
-    # associate transaction => products
+    # associate transaction w/ products
     products = Product.all
     Transaction.all.each_with_index do |transaction, index|
       PRODUCTS_PER_TRANSACTION.times do |multiplier|
