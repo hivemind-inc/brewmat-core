@@ -2,7 +2,6 @@ class CreateContacts < ActiveRecord::Migration
   def change
     create_table :contacts do |t|
       t.belongs_to :user
-      t.belongs_to :vendor
 
       t.string :zipcode, limit: 10
       t.string :address
