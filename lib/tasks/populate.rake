@@ -48,7 +48,10 @@ namespace :db do
       p.tasting_notes = Faker::Lorem.paragraph(1)
     end
 
-    # TODO "creating product types"
+    puts "creating product types"
+    ProductType.populate USERS * TRANSACTIONS * PRODUCTS do |pt|
+      pt.description = Faker::Lorem.sentence(1)
+    end
 
     ### BUILD ASSOCIATIONS ###
 
@@ -80,6 +83,10 @@ namespace :db do
       end
     end
 
-    # TODO "associating products << product_type"
+    puts "associating products << product_type"
+    product_types = ProductType.all
+    Product.all.each_with_index do |p, i|
+      p.product_types << product_types[i]
+    end
   end
 end
