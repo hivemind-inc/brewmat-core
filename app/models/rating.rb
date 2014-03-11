@@ -1,4 +1,4 @@
-class ProductRating < ActiveRecord::Base
+class Rating < ActiveRecord::Base
   belongs_to :product
   belongs_to :user
 end

@@ -4,5 +4,5 @@ class User < ActiveRecord::Base
   has_one :vendor
   has_many :contacts
   has_many :transactions
-  has_many :product_ratings
+  has_many :ratings
 end

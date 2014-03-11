@@ -1,7 +1,8 @@
-VENDORS      = 10
-USERS        = 100
+VENDORS      = 100
+USERS        = 1000
 TRANSACTIONS = 5
 PRODUCTS     = 2
+RATINGS      = 5
 
 namespace :db do
   desc "Erase and fill database"
@@ -14,6 +15,7 @@ namespace :db do
     puts "Users: #{USERS}"
     puts "Transactions: #{TRANSACTIONS}"
     puts "Products: #{PRODUCTS}"
+    puts "Ratings: #{RATINGS}"
 
     puts "\nclearing old data..."
     Rake::Task["db:reset"].invoke
@@ -67,7 +69,12 @@ namespace :db do
       pt.description = Faker::Lorem.sentence(1)
     end
 
-    # TODO: product ratings
+    puts "creating ratings..."
+    Rating.populate USERS * TRANSACTIONS * PRODUCTS * RATINGS do |r|
+      r.title         = Faker::Name.title
+      r.comment       = Faker::Lorem.paragraph(2)
+      r.rating_number = Faker::Number.digit
+    end
 
     ### BUILD ASSOCIATIONS ###
 
@@ -112,6 +119,16 @@ namespace :db do
     end
 
     puts "associating: vendor << products"
+    products = Product.all
+    Vendor.all.each_with_index do |v, i|
+      v.products << products[i]
+    end
+
+    puts "associating: products << ratings"
+    ratings = Rating.all
+    Product.all.each_with_index do |p, i|
+      p.ratings << ratings[i]
+    end
 
     puts "\npopulation complete!"
   end

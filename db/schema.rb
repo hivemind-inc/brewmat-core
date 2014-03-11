@@ -28,14 +28,6 @@ ActiveRecord::Schema.define(version: 20140311034441) do
     t.string  "state"
   end
 
-  create_table "product_ratings", force: true do |t|
-    t.integer "product_id"
-    t.integer "user_id"
-    t.integer "rating_number"
-    t.string  "title"
-    t.text    "comment"
-  end
-
   create_table "product_types", force: true do |t|
     t.integer "product_id"
     t.string  "description"
@@ -55,6 +47,14 @@ ActiveRecord::Schema.define(version: 20140311034441) do
     t.integer "transaction_id"
     t.integer "product_id"
     t.integer "quantity"
+  end
+
+  create_table "ratings", force: true do |t|
+    t.integer "product_id"
+    t.integer "user_id"
+    t.integer "rating_number"
+    t.string  "title"
+    t.text    "comment"
   end
 
   create_table "transaction_states", force: true do |t|
