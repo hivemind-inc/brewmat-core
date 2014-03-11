@@ -1,3 +1,4 @@
+VENDORS      = 10
 USERS        = 100
 TRANSACTIONS = 5
 PRODUCTS     = 2
@@ -8,15 +9,28 @@ namespace :db do
     require 'populator'
     require 'faker'
 
-    [User, Contact, Transaction, Product].each(&:delete_all)
+    puts "Initializing database with: \n\n"
+    puts "Vendors: #{VENDORS}"
+    puts "Users: #{USERS}"
+    puts "Transactions: #{TRANSACTIONS}"
+    puts "Products: #{PRODUCTS}"
 
-    puts "create users"
+    puts "\nclearing old data..."
+    Rake::Task["db:reset"].invoke
+
+    puts "\ncreating users..."
     User.populate USERS do |user|
       user.email              = Faker::Internet.email
       user.encrypted_password = Faker::Internet.password
     end
 
-    puts "creating contacts"
+    puts "creating vendors..."
+    Vendor.populate VENDORS do |v|
+      v.url  = Faker::Internet.url
+      v.name = Faker::Company.name
+    end
+
+    puts "creating contacts..."
     Contact.populate USERS do |c|
       c.first_name         = Faker::Name.first_name
       c.last_name          = Faker::Name.last_name
@@ -28,17 +42,17 @@ namespace :db do
       c.country            = Faker::Address.country
     end
 
-    puts "create transactions"
+    puts "creating transactions..."
     Transaction.populate USERS * TRANSACTIONS do |t|
       t.price             = "#{Faker::Number.number(3)}.#{Faker::Number.number(2)}"
     end
 
-    puts "creating transaction states"
+    puts "creating transaction states..."
     TransactionState.populate USERS * TRANSACTIONS do |ts|
       ts.description = Faker::Lorem.sentence(1)
     end
 
-    puts "creating products"
+    puts "creating products..."
     Product.populate USERS * TRANSACTIONS * PRODUCTS do |p|
       p.price         = "#{Faker::Number.number(2)}.#{Faker::Number.number(2)}"
       p.shipping_cost = Faker::Number.digit
@@ -48,20 +62,28 @@ namespace :db do
       p.tasting_notes = Faker::Lorem.paragraph(1)
     end
 
-    puts "creating product types"
+    puts "creating product types..."
     ProductType.populate USERS * TRANSACTIONS * PRODUCTS do |pt|
       pt.description = Faker::Lorem.sentence(1)
     end
 
+    # TODO: product ratings
+
     ### BUILD ASSOCIATIONS ###
 
-    puts "associating user << contact"
+    puts "\nassociating: user << contact"
     contacts = Contact.all
     User.all.each_with_index do |u, i|
       u.contacts << contacts[i]
     end
 
-    puts "associating user << transactions"
+    puts "associating: user << vendor"
+    vendors = Vendor.all
+    User.all.limit(VENDORS).each_with_index do |u, i|
+      u.update(vendor: vendors[i])
+    end
+
+    puts "associating: user << transactions"
     transactions = Transaction.all
     User.all.each_with_index do |user, i|
       TRANSACTIONS.times do |multiplier|
@@ -69,13 +91,13 @@ namespace :db do
       end
     end
 
-    puts "associating transaction << transaction_state"
+    puts "associating: transaction << transaction_state"
     transaction_states = TransactionState.all
     Transaction.all.each_with_index do |t, i|
       t.update(transaction_state: transaction_states[i])
     end
 
-    puts "associating transaction << products"
+    puts "associating: transaction << products"
     products = Product.all
     Transaction.all.each_with_index do |t, i|
       PRODUCTS.times do |multiplier|
@@ -83,10 +105,14 @@ namespace :db do
       end
     end
 
-    puts "associating products << product_type"
+    puts "associating: products << product_type"
     product_types = ProductType.all
     Product.all.each_with_index do |p, i|
       p.product_types << product_types[i]
     end
+
+    puts "associating: vendor << products"
+
+    puts "\npopulation complete!"
   end
 end
