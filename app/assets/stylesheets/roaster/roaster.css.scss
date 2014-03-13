@@ -11,15 +11,35 @@
 
     .col-md-4 {
 
+      min-width: 250px;
+
       .vendor-container {
         border: 12px solid #38434d;
         height: 250px;
+        min-width: 150px;
         margin-bottom: 20px;
-        background: #fff;
 
-        p {
-          margin-top: 170px;
+          img {
+            position: absolute;
+            bottom: 95px;
+            left: 42%;
+          }
+
+        h4, h5 {
           text-align: center;
+          color: #fff;
+          width: 100%;
+        }
+
+        h4 {
+          padding-top: 160px;
+        }
+
+        h5 {
+          span {
+            font-size: 11px;
+            padding-right: 15px;
+          }
         }
       }
     }
