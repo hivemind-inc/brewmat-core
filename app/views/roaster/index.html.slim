@@ -1,3 +1,11 @@
-= render 'shared/placeholder'
+#roasters.container
+  h1.brand-font.text-center Local Coffee Subscribed.
+
+  - @vendors.each_with_index do |vendor, index|
+    a href="#"
+      .col-md-4.grow
+        .vendor-container
+          p=vendor.name
+
 = render 'shared/contact'
 = render 'shared/footer'

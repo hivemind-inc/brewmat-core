@@ -1,0 +1,27 @@
+#roasters {
+  h1 {
+    font-size: 44px;
+    margin-bottom: 40px;
+    margin-top: 0;
+  }
+
+  a {
+
+    color: #333;
+
+    .col-md-4 {
+
+      .vendor-container {
+        border: 12px solid #38434d;
+        height: 250px;
+        margin-bottom: 20px;
+        background: #fff;
+
+        p {
+          margin-top: 170px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
