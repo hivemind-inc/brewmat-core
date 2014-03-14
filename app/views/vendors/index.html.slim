@@ -1,8 +1,8 @@
-#roasters.container
+#vendors.container
   h1.brand-font.text-center Local Coffee Subscribed.
 
   - @vendors.each_with_index do |vendor, index|
-    a href="#"
+    a href="/vendors/#{vendor.id}"
       .col-xs-4.grow
         .vendor-container style="background-image: url('http://lorempixel.com/g/326/226/');"
           img.img-circle src="http://lorempixel.com/50/50/"
@@ -10,7 +10,9 @@
 
           h5.brand-font
             span.glyphicon.glyphicon-map-marker
-            | Denver, Colorado
+            |  #{vendor.city}, #{vendor.state}
+
 
 = render 'shared/contact'
 = render 'shared/footer'
+

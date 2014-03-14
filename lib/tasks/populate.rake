@@ -1,5 +1,5 @@
-VENDORS      = 100
-USERS        = 1000
+VENDORS      = 50
+USERS        = 100
 TRANSACTIONS = 5
 PRODUCTS     = 2
 RATINGS      = 5
@@ -13,9 +13,9 @@ namespace :db do
     puts "Initializing database with: \n\n"
     puts "Vendors: #{VENDORS}"
     puts "Users: #{USERS}"
-    puts "Transactions: #{TRANSACTIONS}"
-    puts "Products: #{PRODUCTS}"
-    puts "Ratings: #{RATINGS}"
+    puts "Transactions: #{TRANSACTIONS * USERS}"
+    puts "Products: #{PRODUCTS * TRANSACTIONS * USERS}"
+    puts "Ratings: #{RATINGS * PRODUCTS * TRANSACTIONS * USERS}"
 
     puts "\nclearing old data..."
     Rake::Task["db:reset"].invoke
@@ -28,8 +28,10 @@ namespace :db do
 
     puts "creating vendors..."
     Vendor.populate VENDORS do |v|
-      v.url  = Faker::Internet.url
-      v.name = Faker::Company.name
+      v.url   = Faker::Internet.url
+      v.name  = Faker::Company.name
+      v.city  = Faker::Address.city
+      v.state = Faker::Address.state
     end
 
     puts "creating contacts..."

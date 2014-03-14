@@ -1,0 +1,11 @@
+= form_for(@vendor) do |f|
+  - if @vendor.errors.any?
+    #error_explanation
+      h2
+        = pluralize(@vendor.errors.count, "error")
+        | prohibited this vendor from being saved:
+      ul
+        - @vendor.errors.full_messages.each do |msg|
+          li= msg
+  .actions
+    = f.submit
