@@ -1,8 +1,6 @@
 ruby '2.2.0'
 source 'https://rubygems.org'
 
-gem 'rails_12factor'
-
 gem 'devise'
 
 gem 'pg'
@@ -42,6 +40,10 @@ group :development do
   gem 'letter_opener'
   gem 'faker'
   gem 'populator'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
 
 # Use ActiveModel has_secure_password
