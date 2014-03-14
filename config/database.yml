@@ -1,11 +1,16 @@
-development:
+defaults: &defaults
   adapter:  postgresql
   encoding: unicode
-  database: grndz_app_development
   pool: 5
 
+development:
+  <<: *defaults
+  database: grndz_app_development
+
 test:
-  adapter:  postgresql
-  encoding: unicode
+  <<: *defaults
   database: grdnz_app_test
-  pool: 5
+
+stage:
+  <<: *defaults
+  database: grndz_app_development
