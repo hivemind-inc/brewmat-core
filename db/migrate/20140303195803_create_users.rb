@@ -32,7 +32,6 @@ class CreateUsers < ActiveRecord::Migration
 
       ## Grndz Specific
       t.integer :type_id, default: 0
-      t.boolean :subscribed, default: false
 
       t.timestamps
     end

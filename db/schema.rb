@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140314014026) do
+ActiveRecord::Schema.define(version: 20140316161202) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,11 @@ ActiveRecord::Schema.define(version: 20140314014026) do
     t.string  "last_name"
     t.string  "secondary_address"
     t.string  "state"
+  end
+
+  create_table "mailing_lists", force: true do |t|
+    t.boolean "subscribed", default: true
+    t.string  "email",                     null: false
   end
 
   create_table "product_types", force: true do |t|
@@ -73,8 +78,8 @@ ActiveRecord::Schema.define(version: 20140314014026) do
   end
 
   create_table "users", force: true do |t|
-    t.string   "email",                  default: "",    null: false
-    t.string   "encrypted_password",     default: "",    null: false
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -91,7 +96,6 @@ ActiveRecord::Schema.define(version: 20140314014026) do
     t.string   "unlock_token"
     t.datetime "locked_at"
     t.integer  "type_id",                default: 0
-    t.boolean  "subscribed",             default: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

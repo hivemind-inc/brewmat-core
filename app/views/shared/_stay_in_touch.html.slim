@@ -1,0 +1,23 @@
+#contact
+  h3 stay in touch
+
+  = form_tag("/stay_in_touch", method: "post")
+    = text_field_tag(:email, nil, placeholder: "Email Address")
+    = submit_tag "Submit"
+
+javascript:
+  $('form').submit(function() {
+    $.ajax({
+        type: "POST",
+        url: $(this).attr('action'),
+        data: $(this).serialize(),
+        dataType: "JSON"
+    }).success(function(json){
+        if (json['success'] === true) {
+          // celebrate by showing the submit complete message
+        } else {
+          // parse out error message and inform the user
+        }
+    });
+    return false;
+  });
