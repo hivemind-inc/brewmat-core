@@ -4,6 +4,7 @@ header
       a href="/" GRNDZ
     span
       a class=(params[:action] == 'index' ? 'active' : 'inactive') href="/" roasters
+      a class=(params[:action] == 'coffee' ? 'active' : 'inactive') href="/coffee" coffee
       - if user_signed_in?
         a class=(params[:action] == 'edit' ? 'active' : 'inactive') href='/users/edit' account
         a href='/users/sign_out' data-method='delete' sign out
