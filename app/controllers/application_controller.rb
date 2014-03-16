@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   def stay_in_touch
     ml = MailingList.new(email: params[:email])
     if ml.save
-      render nothing: true, json: {success: true}
+      render nothing: true, status: 200, json: {success: true}
     else
       render nothing: true, json: {success: false, errors: ml.errors}
     end
