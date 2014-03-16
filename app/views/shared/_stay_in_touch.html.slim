@@ -4,10 +4,10 @@
   h4 Stay up to date on the latest from Grndz.
 
   = form_tag("/stay_in_touch", method: "post")
-    = text_field_tag(:email, nil, placeholder: "Email Address")
-    = submit_tag "Submit"
+    = text_field_tag :email, nil, placeholder: "Email Address"
+    = submit_tag "Submit", class: "button btn"
 
-  h5 Are you a roaster? Join Grndz at roasters@grndz.com.
+  h5 Are you a roaster? Join Grndz at <a href="mailto:roasters@grndz.com">roasters@grndz.com</a>.
 
 javascript:
   $('form').submit(function() {
