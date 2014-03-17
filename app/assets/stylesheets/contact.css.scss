@@ -47,17 +47,17 @@
     }
 
     input#email {
-      -moz-transition: background .5s;
-      -webkit-transition: background .5s;
+      -moz-transition: background 2.5s;
+      -webkit-transition: background 2.5s;
       background: #f2efe9;
       margin: 20px 0 20px 0;
       transition: background .5s;
 
       &:focus {
         background: #f3f3f3;
-        -webkit-transition: background .25s;
-        -moz-transition: background .25s;
-        transition: background .25s;
+        -webkit-transition: background .5s;
+        -moz-transition: background .5s;
+        transition: background .5s;
         outline: 0
       }
     }

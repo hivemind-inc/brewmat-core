@@ -18,9 +18,12 @@ javascript:
         dataType: "JSON"
     }).success(function(json){
         if (json['success'] === true) {
-          // celebrate by showing the submit complete message
+          $("form :input").attr("disabled", true);
+          $('#email').css('background-color', 'white');
+          $('input.button').val("Got it. We'll keep you in the loop.")
         } else {
-          // error message the user
+          $('#email').addClass('animated shake')
+          $('#email').css('background-color', '#F2E07B')
         }
     });
     return false;
