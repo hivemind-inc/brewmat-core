@@ -3,7 +3,7 @@
 
   h4 Stay up to date on the latest from Grndz.
 
-  = form_tag("/stay_in_touch", method: "post")
+  = form_tag(email_subscribe_path, method: "post")
     = text_field_tag :email, nil, placeholder: "Email Address"
     = submit_tag "Submit", class: "button btn"
 
@@ -20,10 +20,10 @@ javascript:
         if (json['success'] === true) {
           $("form :input").attr("disabled", true);
           $('#email').css('background-color', 'white');
-          $('input.button').val("Got it. We'll keep you in the loop.")
+          $('input.button').val("Got it. We'll keep you in the loop.");
         } else {
-          $('#email').addClass('animated shake')
-          $('#email').css('background-color', '#F2E07B')
+          $('#email').addClass('animated shake');
+          $('#email').css('background-color', '#F2E07B');
         }
     });
     return false;
