@@ -37,8 +37,9 @@ group :doc do
 end
 
 group :development do
-  gem 'letter_opener'
+  gem 'better_errors'
   gem 'faker'
+  gem 'letter_opener'
   gem 'populator'
 end
 
