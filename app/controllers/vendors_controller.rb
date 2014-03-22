@@ -5,7 +5,7 @@ class VendorsController < ApplicationController
   # GET /vendors.json
   def index
     @home_page = true
-    @vendors = Vendor.all.limit(21)
+    @vendors = Vendor.all.limit(9)
   end
 
   # GET /vendors/1

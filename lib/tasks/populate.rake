@@ -121,9 +121,12 @@ namespace :db do
     end
 
     puts "associating: vendor << products"
+    puts "associating: vendor << images"
     products = Product.all
     Vendor.all.each_with_index do |v, i|
       v.products << products[i]
+      v.images << Image.create(url: "http://lorempixel.com/g/326/226/", image_type: "hero")
+      v.images << Image.create(url: "http://lorempixel.com/50/50/", image_type: "logo")
     end
 
     puts "associating: products << ratings"
