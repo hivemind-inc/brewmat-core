@@ -4,8 +4,8 @@
   - @vendors.each_with_index do |vendor, index|
     a href="/vendors/#{vendor.id}"
       .col-xs-4.grow
-        .vendor-container style="background-image: url('http://lorempixel.com/g/326/226/');"
-          img.img-circle src="http://lorempixel.com/50/50/"
+        .vendor-container style="background-image: url('#{vendor_hero_image(vendor)}');"
+          img.img-circle src=vendor_logo_image(vendor)
           h4.brand-font=vendor.name
 
           h5.brand-font
