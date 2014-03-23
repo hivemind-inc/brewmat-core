@@ -13,12 +13,15 @@ footer {
     font-size: 14px;
     padding-top: 80px;
 
-    li {
+    li a {
       color: #999;
+      &:hover {
+        color: #fff;
+        text-decoration: none;
+      }
     }
 
     li:first-of-type {
-      color: #fff;
     }
   }
 }
