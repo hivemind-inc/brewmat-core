@@ -1,4 +1,8 @@
-h1 Editing vendor
-= render 'form'
-= link_to 'Show', @vendor
-= link_to 'Back', vendors_path
+= render 'shared/header'
+= render 'shared/notices'
+
+#edit-vendor.container
+  h1 build the brand
+  = render 'form'
+  = link_to 'Show', @vendor
+  = link_to 'Back', vendors_path
