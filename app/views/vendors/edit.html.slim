@@ -1,8 +1,12 @@
-= render 'shared/header'
 = render 'shared/notices'
+= render 'shared/header'
 
 #edit-vendor.container
-  h1 build the brand
-  = render 'form'
-  = link_to 'Show', @vendor
-  = link_to 'Back', vendors_path
+  h1 roaster control center
+  .row
+    .col-md-6
+      = render 'form'
+    col-md-6
+      = render 'vendors/product_control'
+  / = link_to 'Show', @vendor
+  / = link_to 'Back', vendors_path
