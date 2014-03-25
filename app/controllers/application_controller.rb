@@ -14,4 +14,7 @@ class ApplicationController < ActionController::Base
   def email_unsubscribe
     MailingList.update(email: params[:email], subscribed: false).save
   end
+
+  def splash
+  end
 end

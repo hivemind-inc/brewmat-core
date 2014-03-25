@@ -1,8 +1,6 @@
 # ruby '2.2.0'
 source 'https://rubygems.org'
 
-gem 'devise'
-
 gem 'pg'
 
 gem 'slim'

@@ -16,14 +16,24 @@
   transform: scale(1.025);
 }
 
-.fade-in {
+.fade-in-fast {
     margin-top: 25px;
     font-size: 21px;
     text-align: center;
-    animation: fadein 1.5s;
-    -moz-animation: fadein 1.5s; /* Firefox */
-    -webkit-animation: fadein 1.5s; /* Safari and Chrome */
-    -o-animation: fadein 1.5s; /* Opera */
+    animation: fadein 2.0s;
+    -moz-animation: fadein 2.0s; /* Firefox */
+    -webkit-animation: fadein 2.0s; /* Safari and Chrome */
+    -o-animation: fadein 2.0s; /* Opera */
+}
+
+.fade-in-slow {
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+    animation: fadein 3.0s;
+    -moz-animation: fadein 3.0s; /* Firefox */
+    -webkit-animation: fadein 3.0s; /* Safari and Chrome */
+    -o-animation: fadein 3.0s; /* Opera */
 }
 
 @keyframes fadein {

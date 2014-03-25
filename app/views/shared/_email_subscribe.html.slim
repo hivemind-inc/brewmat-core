@@ -1,13 +1,11 @@
 #contact
-  h3 stay in touch
-
-  h4 Stay up to date on the latest from Grndz.
+  h4 Stay up to date on all things coffee.
 
   = form_tag(email_subscribe_path, method: "post")
     = text_field_tag :email, nil, placeholder: "Email Address"
     = submit_tag "Submit", class: "button btn"
 
-  h5 Are you a roaster? Join Grndz at <a href="mailto:roasters@grndz.com">roasters@grndz.com</a>.
+  / h5 Are you a roaster? Join Grndz at <a href="mailto:roasters@grndz.com">roasters@grndz.com</a>.
 
 javascript:
   $('form').submit(function() {
