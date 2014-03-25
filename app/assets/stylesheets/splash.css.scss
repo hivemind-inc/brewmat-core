@@ -1,5 +1,6 @@
 body {
   -webkit-font-smoothing: antialiased;
+  margin: 0;
 }
 
 body:after {
@@ -26,7 +27,7 @@ body:after {
     margin-top: -100px;
     position: absolute;
     top: 34%;
-    width: 99%;
+    width: 100%;
   .grndz-copy {
     h1, h2 {
       font-family: europa, sans-serif;
