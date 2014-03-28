@@ -70,14 +70,20 @@ body:after {
     h1, h2 {
       color: #fff;
       font-family: europa, sans-serif;
-      font-size: 60px;
       margin: 0;
       text-align: center;
       text-transform: uppercase;
     }
 
+    h1 {
+      font-size: 60px;
+    }
+
     h2 {
+      font-size: 50px;
       font-weight: 200;
+      position: relative;
+      top: -10px;
     }
 
     @media (max-width: 900px) {
