@@ -4,10 +4,16 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def email_subscribe
-    if MailingList.new(email: params[:email]).save
-      render nothing: true, status: 200, json: {success: true}
+    @ml = MailingList.new(email: params[:email])
+
+    if @ml.save
+      render nothing: true, status: 200, json: { success: true }
     else
-      render nothing: true, json: {success: false}
+      if duplicate_email?(@ml.errors)
+        render nothing: true, status: 200, json: { success: true }
+      else
+        render nothing: true, status: 200, json: { success: false }
+      end
     end
   end
 
@@ -16,5 +22,11 @@ class ApplicationController < ActionController::Base
   end
 
   def splash
+  end
+
+  private
+
+  def duplicate_email?(errors)
+    errors.messages[:email].first =~ /already been taken/
   end
 end
