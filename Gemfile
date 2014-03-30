@@ -45,6 +45,13 @@ group :production do
   gem 'rails_12factor'
 end
 
+group :testing do
+  gem 'capybara'
+  gem 'fuubar'
+  gem 'rspec'
+  gem 'rspec-rails'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
