@@ -34,6 +34,10 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :production do
+  gem 'rails_12factor'
+end
+
 group :development do
   gem 'better_errors'
   gem 'faker'
@@ -41,13 +45,10 @@ group :development do
   gem 'populator'
 end
 
-group :production do
-  gem 'rails_12factor'
-end
-
-group :test do
+group :test, :development do
   gem 'capybara'
   gem 'fuubar'
+  gem 'jasmine'
   gem 'rspec'
   gem 'rspec-rails'
 end
