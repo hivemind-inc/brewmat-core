@@ -45,7 +45,7 @@ group :production do
   gem 'rails_12factor'
 end
 
-group :testing do
+group :test do
   gem 'capybara'
   gem 'fuubar'
   gem 'rspec'
