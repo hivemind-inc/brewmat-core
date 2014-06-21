@@ -1,0 +1,27 @@
+#index {
+  .row { width: 100%; }
+  .row:nth-child(1n+1) { background: #FFB03B; height: 500px; }
+  .row:nth-child(2n+2) { background: #FFF0A5; height: 750px; }
+
+  .row-first .content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 900px;
+    padding: 150px 15px;
+  }
+
+  .row-first .content h1 {
+    text-transform: uppercase;
+    font-size: 80px;
+    line-height: 68px;
+  }
+
+  .row-first .content h4 {
+    font-size: 24px;
+    font-weight: 200;
+    margin-top: 30px;
+    max-width: 520px;
+    line-height: 28px;
+    margin-left: 5px;
+  }
+}
