@@ -1,4 +1,4 @@
-# Grndz Coffee Co.
+# BrewMat
 
 ## Installation
 
