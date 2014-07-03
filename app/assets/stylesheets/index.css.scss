@@ -55,6 +55,22 @@
 
   #our-product {
     padding: 140px 25px;
+    position: relative;
+    color: #fff;
+  }
+
+  #our-product:after {
+    background-size: 100%;
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: image-url("coffee-beans.jpg");
+    width: 100%;
+    height: 100%;
+    opacity : 0.9;
+    z-index: -1
   }
 
   #our-product .content p {
