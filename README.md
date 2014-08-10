@@ -12,7 +12,7 @@ TBD.
 
 ### Running the Tests
 
-Tests should **always** be run before a commit. Failed tests will result in brutal *shaming*. You have been warned.
+Tests should **always** be run before a commit. Failed tests will result in brutal *shaming*.
 
     bundle exec rspec
 
