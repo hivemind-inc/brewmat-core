@@ -45,4 +45,5 @@ group :development, :test do
   gem 'fuubar'
   gem 'faker'
   gem 'factory_girl_rails'
+  gem 'shoulda-matchers'
 end
