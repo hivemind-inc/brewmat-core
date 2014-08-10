@@ -5,4 +5,4 @@
 
 %ul
 - @products.each do |product|
-  %li= product.name
+  %li= link_to product.name, product

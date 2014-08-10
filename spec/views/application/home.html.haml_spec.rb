@@ -14,7 +14,7 @@ describe "application/home.html.haml" do
   it { should have_css "a[href='#{users_path}']", text: "Users"}
   it { should have_css "a[href='#{products_path}']", text: "Products"}
 
-  it { should have_css "li", text: products.first.name }
-  it { should have_css "li", text: products.second.name }
-  it { should have_css "li", text: products.third.name }
+  it { should have_css "a[href='#{product_path(products.first)}']", text: products.first.name }
+  it { should have_css "a[href='#{product_path(products.second)}']", text: products.second.name }
+  it { should have_css "a[href='#{product_path(products.third)}']", text: products.third.name }
 end
