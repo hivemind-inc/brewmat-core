@@ -1,10 +1,20 @@
 require "spec_helper"
 
 describe "application/home.html.haml" do
-  before  { render }
+  let(:products) { FactoryGirl.create_list(:product, 3) }
+
+  before(:each) do
+    assign(:products, products)
+    render
+  end
+
   subject { rendered }
 
   it { should have_css "h1", text: "Welcome Home. Buy some coffee."}
   it { should have_css "a[href='#{users_path}']", text: "Users"}
   it { should have_css "a[href='#{products_path}']", text: "Products"}
+
+  it { should have_css "li", text: products.first.name }
+  it { should have_css "li", text: products.second.name }
+  it { should have_css "li", text: products.third.name }
 end
