@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "application/home.html.haml" do
+describe "application/index.html.haml" do
   let(:products) { FactoryGirl.create_list(:product, 3) }
 
   before(:each) do
